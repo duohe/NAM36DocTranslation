@@ -1,0 +1,44 @@
+		p {font-family: Arial, Helvetica, sans-serif; font-size: 13px; text-align: justify}
+		.title {font-size: 15px; text-align: justify; font-weight: bold}
+		body {background-color: #414141; padding: 0% 3% 0% 03%}
+		.important {font-weight: bold; color: #FF0000}
+		.tablemain {width:70%; padding: 10px; background-color: #EEEEEE}
+		.main {width:100%; padding: 5px; text-align: center; background-color: #EEEEEE; margin: auto}
+		.banner {height: 24px; background-color: #E96320; font-family: Arial, Helvetica, sans-serif; font-size: 15px; font-weight: bold; text-align: justify; color: #FFFFFF}
+		.bannerfull {height: 24px; background-color: #E96320; font-family: Arial, Helvetica, sans-serif; font-size: 15px; font-weight: bold; text-align: justify; color: #FFFFFF; width: 100%}
+		.banner_alt {height: 24px; background-color: #222222}
+		.regtext {margin: 0px 5px 0px 5px}
+		li {font-family: Arial, Helvetica, sans-serif; font-size: 13px; text-align: justify}
+		.tablerow-alt {background-color: #C9EBF0}
+		.tablerow-alt-leftalign {background-color: #C9EBF0; text-align: left}
+		.toprow {font-family: Arial, Helvetica, sans-serif; text-align: justify;  font-weight: bold; background-color: #C9EBF0}
+		tbody {font-family: Arial, Helvetica, sans-serif; text-align: justify; font-size: 13px}
+		.speed {text-align: center}
+		.inc {color: #009900}
+		.dec {color: #FF0000}
+		.footer {text-align: center; background-color: #AAAAAA}
+		.logobanner {text-align: center}
+		.faq {font-weight: bold}
+		.navigation {font-family: Arial, Helvetica, sans-serif; background-color: #EEEEEE; font-size: 13px; text-align: center; padding: 0px}
+		.underline{text-decoration: underline}
+		.paddedlist{line-height: 113%}
+		.leftcolumn{width: 49%; display: inline-block; margin: auto; vertical-align: text-top}
+		.rightcolumn{width: 49%; display: inline-block; margin: auto; vertical-align: text-top}
+		.importantbox{display:inline-block; margin: auto; background-color: #CCCCCC}
+		.urgentbox{display:inline-block; margin: auto; background-color: #888800}
+		.leftheading{font-family: Arial, Helvetica, sans-serif; text-align:left}
+		.screenshots{text-align: center; display: inline-block}
+		.screenleft{text-align: left; display: inline-block; width: 100%}
+		.screencenter{text-align: center; display: inline-block; width: 100%}
+		.standimg{width: 250px; height: 188px}		
+		.midimg{width: 40%}
+		.table-bordered {border-style:solid; border-width: 1px}
+		.table-yes {background-color: #008800; color:#FFFFFF; text-align: center}
+		.table-partial {background-color: #DDDD00; text-align: center}
+		.table-limited {background-color: #DD4400; color:#FFFFFF; text-align: center}
+		.table-no {background-color: #DD0000; color:#FFFFFF; text-align: center}
+		.table-black {background-color: #000000; color:#FFFFFF; text-align: center}
+		.leftalign {text-align: left}
+		.rightalign {text-align: right}
+		.tenwidth{text-align: center; width: 10%}
+		.screenleft-reg{text-align: left; display: inline-block}

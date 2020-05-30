@@ -1,0 +1,363 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+		<title>Network Addon Mod - Street Addon Mod (SAM) Feature Guide</title>
+		<link rel="stylesheet" type="text/css" href="../../namdoc.css">
+	</head>
+
+	<body>
+		<div class="main">
+			<div class="logobanner"><img src="../../images/readmebanner.png" alt="readmebanner"></div>
+			
+			<div>
+				<p class="navigation">
+					<a href="../../1-start.html">Start</a>&nbsp;
+					<a href="../../2-installation.html">Installation</a>&nbsp;
+					<a href="../../3-basics.html">In-Game Basics</a>&nbsp;
+					<a href="../../4-content-overview.html">Content Overview</a>&nbsp;
+					<a href="../../5-faq.html">FAQs</a>&nbsp;
+					<a href="../../6-glossary.html">Glossary</a>&nbsp;
+					<a href="../../7-history.html">History</a>&nbsp;
+					<a href="../../8-technical.html">Tech Info</a>&nbsp;
+					<a href="../../9-credits.html">Credits</a>&nbsp;
+					<a href="../quicklink.html">Feature Guides</a>
+				</p>
+			</div>
+			
+			<div class="bannerfull"><h4>&nbsp;Street Addon Mod (SAM) Features</h4></div>
+			
+			<div class="regtext">
+				<p>The Street Addon Mod (SAM) is a plugin which uses Starter Piece technology to add texture variants of the
+				Street network.  These variants also support (as appropriate) many of the same features as the base Street network, including
+				support for the NAM's <a href="../base-network/base-network.html#diagonalstreets">Diagonal Streets Plugin</a> and
+				<a href="../base-network/base-network.html#curves">Wide-Radius and Multi-Radius Curves</a>.</p>
+				
+			<span><img class="standimg" src="images/samteaser1.jpg" alt="samteaser1">&nbsp;<img class="standimg" src="images/samteaser2.jpg" alt="samteaser2"></span><br>
+			<span><img class="standimg" src="images/samteaser3.jpg" alt="samteaser3">&nbsp;<img class="standimg" src="images/samteaser4.jpg" alt="samteaser4"></span>
+
+			</div>
+			
+			<div class="bannerfull"><h4>&nbsp;Table of Contents</h4></div>
+			<div class="regtext">
+				<ul class="paddedlist">
+					<li><a href="#installation">Installing the Street Addon Mod from the NAM Installer</a></li>
+					<li><a href="#networks">Street Addon Mod Override Networks</a></li>
+					<li><a href="#diagonals">Constructing Diagonals and Curves</a></li>
+					<li><a href="#connection">Intersecting and Transitioning to Other Networks</a></li>
+					<li><a href="#bridges">Bridges</a></li>
+					<li><a href="#tunnels">Tunnels</a></li>
+					<li><a href="#capabilities">Network Capabilities</a></li>
+					<li><a href="#knownissues">Known Issues</a></li>
+					<li><a href="#support-development">Information on Support and Development Updates</a></li>
+				</ul>
+			</div>
+			
+			<div class="bannerfull"><a name="installation"></a><h4>&nbsp;Installing the Street Addon Mod from the NAM Installer</h4></div>
+			<div class="regtext">
+				<p>To install the Street Addon Mod in its entirety, simply select the "Street Addon Mod" box under the "NAM Networks and Network Expansions" section of Custom Installation.  The "Networks and Traffic Simulator"
+				and "Complete Standard Installation" preset options will also install the SAM by default.  If one wishes to only install specific SAM override networks, clicking the "+" next to the "Street Addon Mod" box will expand
+				the options, and allow one to select or deselect each network.</p>
+				<img class="screenshot" src="images/sam-installer.jpg" alt="SAM in NAM Installer"</img>
+			</div>
+			
+			<div class="bannerfull"><a name="networks"></a><h4>&nbsp;Street Addon Mod Override Networks</h4></div>
+			<div class="regtext">
+				<p>The Street Addon Mod includes a total of 11 different Street-based override networks.</p>
+				
+				<ul>
+					<li>SAM 1 - Parking Lots (Original Base by Pegasus)</li>
+					<li>SAM 2 - Herringbone Streets (Original Base by ardecila)</li>
+					<li>SAM 3 - PEG Dirt Streets (Original Base by Pegasus)</li>
+					<li>SAM 4 - PEG Gravel Streets (Original Base by Pegasus)</li>
+					<li>SAM 5 - trolca Dirt Streets (Original Base by trolca)</li>
+					<li>SAM 6 - Klinker Streets (Original Base by squidi and jplumbley)</li>
+					<li>SAM 7 - Asphalt Streets (Original Base by Heblem [formerly Hableurg])</li>
+					<li>SAM 8 - Cobblestone Streets (Original Base by xannepan)</li>
+					<li>SAM 9 - Brick Streets (Original Base by JosefBrisko135 and ScruffyDeluxe)</li>
+					<li>SAM 10 - Japanese Streets (Original Base by moonlinght)</li>
+					<li>SAM 11 - Industrial Streets (Original Base by mgb204)</li>
+				</ul>
+				
+				<img class="screencenter" src="images/sam-networks1.jpg" alt="SAM Networks 1"</img>
+				<img class="screencenter" src="images/sam-networks2.jpg" alt="SAM Networks 2"</img>
+				
+				<p>Each override network is initiated by first placing the appropriate Starter Piece (all SAM Starter Pieces are found under the Street Addon Mod button on the Roads menu), and then dragging the Street network
+				through the Starter Piece.  This process is shown below.</p>
+				
+				<a href="images/sam-starter.jpg"><img class="screencenter" src="images/sam-starter.jpg" alt="SAM Starter Usage"></a>
+			</div>
+			
+			<div class="bannerfull"><a name="diagonals"></a><h4>&nbsp;Constructing Diagonals and Curves</h4></div>
+			<div class="regtext">
+				<p>With the exception of SAM 1, the Parking Lots set, all SAM networks can go diagonal, with SAM overrides continuing through the NAM's Diagonal Street Plugin, provided one is using either the 
+				FLEX/Helper Pieces or the Draggable Method.  (The Diagonal Street Fillers, as static puzzle pieces, cannot carry overrides.)  The process is shown below.</p>
+				
+				<a href="images/sam-diagonal.jpg"><img class="screencenter" src="images/sam-diagonal.jpg" alt="SAM Diagonal Usage"></a>
+				
+				<p>All SAM Sets, with the exception of SAM 1, can also override the NAM's Draggable Wide-Radius Curves for the Street network, simply by dragging the SAM network up to the edge of the curve, or drawing
+				the pattern while continuing a SAM override.  This process is shown below:</p>
+				
+				<a href="images/sam-wrc.jpg"><img class="screencenter" src="images/sam-wrc.jpg" alt="SAM Wide-Radius Curve Override"></a>
+
+				
+				<p>For quick reference, the patterns for the Draggable Wide-Radius Curves for the Street network are shown below:</p>
+				
+				<a href="images/sam-wrc-patterns.jpg"><img class="screencenter" src="images/sam-wrc-patterns.jpg" alt="Street Wide-Radius Curve Patterns"></a>
+				
+				<p>All networks, including SAM 1, also support the default sharp 90° bend.</p>
+				
+				<p>(Older, static puzzle piece curves for some SAM sets can also be found in the Rural Roads Plugin (RuRP), and will be found under the Rural Roads button on the Roads menu.)</p>
+
+			</div>		
+
+			<div class="bannerfull"><a name="connection"></a><h4>&nbsp;Intersecting and Transitioning to Other Networks</h4></div>
+			<div class="regtext">
+				<h5 class="leftheading">Intersections and Transitions with Other Networks</h5>
+				<p>With supported networks--including Roads, One-Way Roads, Avenues, and Rails (including all Rail-based override networks*)--intersections and crossings can simply 
+				be built by dragging the overridden Street network through the network, just as one would with any other draggable network.  Supported networks allow for crossings in all possible permutations of orthogonal and diagonal networks.
+				(The <a href="../high-speed-rail">High Speed Rail</a> override network also allows orthogonal x orthogonal crossings of select SAM networks via static puzzle pieces.)</p>
+				
+				<a href="images/sam-intersection.jpg"><img class="screencenter" src="images/sam-intersection.jpg" alt="SAM Intersection Construction"></a>
+				
+				<p>In addition, it is possible to transition to the Road, One-Way Road, or Avenue network by simply dragging to connect one of these networks to the SAM Network.</p>
+				
+				<p>SAM Set 1 (the Parking Lots) are a special case.  They can intersect or transition to other networks in a clean visual manner due to how they dovetail with the base Street network, but technically cannot form
+				intersections or transitions.  The overrides will not continue beyond the intersection, unlike what occurs with all the other SAM networks.</p>
+				
+				<h5 class="leftheading">SAM Interaction with the Street Network</h5>
+				<p>SAM Overrides are pervasive.  The presence of a SAM Starter Piece will cause all Streets with exposure to the SAM Street--including those that intersect it--to also be overridden.  As such, it is <strong>not possible</strong> to create an intersection
+				between a SAM Street and a Maxis Street, or between two different SAM types.</p>
+				
+				<a href="images/sam-override.jpg"><img class="screencenter" src="images/sam-override.jpg" alt="SAM Override Behavior on Street Network"></a>
+				
+				<p>Transitions between two SAM Sets can be approximated by placing two different Starter Pieces back to back, or by quickly transitioning from SAM -> Road -> Street, which
+				breaks the override, though care should be taken even in these cases. Attempting to drag two SAM Sets into one another will simply result in a "tug-of-war" between the two sets, 
+				which can have unpredictable and unstable results.</p>
+				
+				<p>*(Rail-based override networks include Single-Track Rail (STR) in both Maxis Rail and RealRailway (RRW) forms, plus the L1 and L2 Draggable Elevated RealRailway Viaducts.)</p>
+
+
+			</div>		
+			
+			<div class="bannerfull"><a name="bridges"></a><h4>&nbsp;Bridges</h4></div>
+			<div class="regtext">
+				<p>Select SAM sets include bridge support.  To access the SAM's bridge options, one should simply drag the Street network across the body of water (or deep canyon) wishes to cross, at which point the SAM
+				bridges will show up among the Street options.
+				</p>
+			</div>
+			
+			<div class="bannerfull"><a name="tunnels"></a><h4>&nbsp;Tunnels</h4></div>
+			<div class="regtext">
+				<p>The base Street network <strong>does NOT support tunnels</strong>, and accordingly, neither do any of the SAM's Street-based override networks.  While certain slope settings may permit a tunnel to appear, 
+				it will be completely non-functional, due to hardcoded limitations that prevent traffic from using it.  There is no known solution to this limitation at present.  The only possible workaround at present is to 
+				transition to another network that does support tunnels.</p>			
+			</div>
+
+			<div class="bannerfull"><a name="capabilities"></a><h4>&nbsp;Network Capabilities</h4></div>
+			<div class="regtext">
+				<h4 class="leftheading"></a>&nbsp;Capabilities of Each Network</h4>
+				<h5 class="leftheading">KEY</h5>
+				<table>
+					<tr>
+						<td class="table-yes">Yes</td><td class="tablerow-alt">This particular feature can be constructed, with minimal (if any) limitations.</td>
+					</tr>
+					<tr>
+						<td class="table-partial">Partial Support</td><td class="tablerow-alt">This particular feature can be constructed, but not in all instances.  Details will be given as to what is/is not possible.
+						Partial support may be for intentional design reasons (such as realism or general unfeasibility), or simply because the feature has not been fully developed.</td>
+					</tr>
+					<tr>
+						<td class="table-limited">Limited Support</td><td class="tablerow-alt">This particular feature can be constructed, but only in extremely limited circumstances.  Instances that are possible may be listed,
+						insofar as it is possible.  Use at your own risk.</td>
+					</tr>
+					<tr>
+						<td class="table-no">No Support</td><td class="tablerow-alt">This particular feature cannot be constructed.  This restriction could be for intentional design reasons (such as realism, 
+						or general unfeasibility), or simply because it has not yet been developed.</td>
+					</tr>
+				</table>
+				<h5 class="leftheading">ADDITIONAL NOTES</h5>
+					<p><strong>OxO</strong>: OxO stands for "orthogonal x orthogonal", and refers to a situation where both networks are orthogonal (in a straight line) along the game's grid, intersecting perpendicularly 
+					(at 90° angles at all corners)</p>
+					<p><strong>OxD</strong>: OxD stands for "orthogonal x diagonal", and refers to a situation where the given network is orthogonal (in a straight line) along the game's grid, and the cross network is diagonal
+					(running at a 45° angle).</p>
+					<p><strong>DxO</strong>: DxO stands for "diagonal x orthogonal", and refers to a situation where the base network is diagonal (running at a 45° angle), and the cross network is orthogonal (in a straight line) 
+					along the game's grid.</p>
+					<p><strong>DxD</strong>: DxD stands for "diagonal x diagonal", and refers to a situation where both networks are diagonal (running at a 45° angle) along the game's grid, intersecting perpendicularly 
+					(at 90° angles at all corners)</p>
+
+					<table>
+						<tr class="tablerow-alt-leftalign">
+							<th>Network</th>
+							<th>Diagonal Support</th>
+							<th>Draggable At-Grade Intersections/Crossings with Other Streets</th>
+							<th>Draggable At-Grade Intersections/Crossings with Road, One-Way Road, Avenue, Rails</th>
+							<th>Draggable At-Grade Intersections/Crossings with Other Networks</th>
+							<th>Draggable Transitions to Road, One-Way Road, and Avenue</th>
+							<th>Draggable Wide-Radius Curve Support</th>
+							<th>Bridges over Water</th>
+							<th>Tunnels</th>
+						</tr>
+						<tr>
+							<th>SAM 1</th>
+							<td class="table-no">No</td>
+							<td class="table-no">No</td>
+							<td class="table-partial">Technically No<br>Override breaks, but results work visually</td>											
+							<td class="table-no">No</td>
+							<td class="table-partial">Technically No<br>Override breaks, but results work visually</td>
+							<td class="table-no">No</td>
+							<td class="table-no">No</td>
+							<td class="table-no">No</td>
+						</tr>
+						<tr class="tablerow-alt">
+							<th>SAM 2</th>
+							<td class="table-yes">Yes</td>
+							<td class="table-no">No</td>
+							<td class="table-yes">Yes</td>											
+							<td class="table-limited">No (OxO PP for HSR)</td>
+							<td class="table-yes">Yes</td>
+							<td class="table-yes">Yes</td>
+							<td class="table-yes">Yes</td>	
+							<td class="table-no">No</td>						
+						</tr>
+						<tr>
+							<th>SAM 3</th>
+							<td class="table-yes">Yes</td>
+							<td class="table-no">No</td>
+							<td class="table-yes">Yes</td>											
+							<td class="table-limited">No (OxO PP for HSR)</td>
+							<td class="table-yes">Yes</td>
+							<td class="table-yes">Yes</td>
+							<td class="table-yes">Yes</td>	
+							<td class="table-no">No</td>						
+						</tr>
+						<tr class="tablerow-alt">
+							<th>SAM 4</th>
+							<td class="table-yes">Yes</td>
+							<td class="table-no">No</td>
+							<td class="table-yes">Yes</td>											
+							<td class="table-limited">No (OxO PP for HSR)</td>
+							<td class="table-yes">Yes</td>
+							<td class="table-yes">Yes</td>
+							<td class="table-yes">Yes</td>
+							<td class="table-no">No</td>						
+						</tr>
+						<tr>
+							<th>SAM 5</th>
+							<td class="table-yes">Yes</td>
+							<td class="table-no">No</td>
+							<td class="table-yes">Yes</td>											
+							<td class="table-limited">No (OxO PP for HSR)</td>
+							<td class="table-yes">Yes</td>
+							<td class="table-yes">Yes</td>
+							<td class="table-yes">Yes</td>
+							<td class="table-no">No</td>						
+						</tr>
+						<tr class="tablerow-alt">
+							<th>SAM 6</th>
+							<td class="table-yes">Yes</td>
+							<td class="table-no">No</td>
+							<td class="table-yes">Yes</td>											
+							<td class="table-no">No</td>
+							<td class="table-yes">Yes</td>
+							<td class="table-yes">Yes</td>
+							<td class="table-no">No</td>
+							<td class="table-no">No</td>						
+						</tr>
+						<tr>
+							<th>SAM 7</th>
+							<td class="table-yes">Yes</td>
+							<td class="table-no">No</td>
+							<td class="table-yes">Yes</td>											
+							<td class="table-limited">No (OxO PP for HSR)</td>
+							<td class="table-yes">Yes</td>
+							<td class="table-yes">Yes</td>
+							<td class="table-yes">Yes</td>
+							<td class="table-no">No</td>						
+						</tr>
+						<tr class="tablerow-alt">
+							<th>SAM 8</th>
+							<td class="table-yes">Yes</td>
+							<td class="table-no">No</td>
+							<td class="table-yes">Yes</td>											
+							<td class="table-limited">No (OxO PP for HSR)</td>
+							<td class="table-yes">Yes</td>
+							<td class="table-yes">Yes</td>
+							<td class="table-yes">Yes</td>
+							<td class="table-no">No</td>						
+						</tr>
+						<tr>
+							<th>SAM 9</th>
+							<td class="table-yes">Yes</td>
+							<td class="table-no">No</td>
+							<td class="table-yes">Yes</td>											
+							<td class="table-limited">No (OxO PP for HSR)</td>
+							<td class="table-yes">Yes</td>
+							<td class="table-yes">Yes</td>
+							<td class="table-yes">Yes</td>
+							<td class="table-no">No</td>						
+						</tr>
+						<tr class="tablerow-alt">
+							<th>SAM 10</th>
+							<td class="table-yes">Yes</td>
+							<td class="table-no">No</td>
+							<td class="table-yes">Yes</td>											
+							<td class="table-no">No</td>
+							<td class="table-yes">Yes</td>
+							<td class="table-yes">Yes</td>
+							<td class="table-no">No</td>
+							<td class="table-no">No</td>						
+						</tr>
+						<tr>
+							<th>SAM 11</th>
+							<td class="table-yes">Yes</td>
+							<td class="table-no">No</td>
+							<td class="table-yes">Yes</td>											
+							<td class="table-no">No</td>
+							<td class="table-yes">Yes</td>
+							<td class="table-yes">Yes</td>
+							<td class="table-no">No</td>
+							<td class="table-no">No</td>							
+						</tr>
+					</table>
+			</div>	
+
+			<div class="bannerfull"><a name="knownissues"></a><h4>&nbsp;Known Issues</h4></div>
+			<div class="regtext">
+				<ul>
+					<li>Attempting to intersect a SAM override network with another NAM override network that does not support SAM crossings may de-stabilize both overrides, causing them to alternate which
+					override is broken with clickaround.</li>
+					<li>Attempting to intersect two SAM types, or transition directly between them will cause override instability.</li>
+					<li>Attempting to build multiple Draggable Wide-Radius Curves and/or intersections directly adjacent to one another may break SAM overrides, causing reversion to Street.</li>
+
+				</ul>
+			</div>				
+
+
+			<div class="bannerfull"><a name="support-development"></a><h4>&nbsp;Information on Support and Development Updates</h4></div>
+			<div class="regtext">
+				<p>For technical support and information on new features coming to the Street Addon Mod in future releases, please check out the official <em>SAM - Street Addon Mod</em>
+				thread on the forum at <a href="http://sc4devotion.com/forums/index.php?topic=1617.0">SimCity 4 Devotion</a>. 
+			</div>	
+			
+			<div class="bannerfull"><h4></h4></div>
+			
+			<div>
+				<p class="navigation">
+					<a href="../../1-start.html">Start</a>&nbsp;
+					<a href="../../2-installation.html">Installation</a>&nbsp;
+					<a href="../../3-basics.html">In-Game Basics</a>&nbsp;
+					<a href="../../4-content-overview.html">Content Overview</a>&nbsp;
+					<a href="../../5-faq.html">FAQs</a>&nbsp;
+					<a href="../../6-glossary.html">Glossary</a>&nbsp;
+					<a href="../../7-history.html">History</a>&nbsp;
+					<a href="../../8-technical.html">Tech Info</a>&nbsp;
+					<a href="../../9-credits.html">Credits</a>&nbsp;
+					<a href="../quicklink.html">Feature Guides</a>
+				</p>
+			</div>
+			
+			<div class="footer"><p>&nbsp;©2017 NAM Team and Associates</p></div>
+		</div>
+	</body>
+</html>

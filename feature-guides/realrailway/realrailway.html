@@ -1,0 +1,508 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html><head>
+
+
+
+
+
+	
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"><title>Network Addon Mod - RealRailway (RRW) Feature Guide</title>
+		
+		
+		<link rel="stylesheet" type="text/css" href="../../namdoc.css"></head><body>
+		<div class="main">
+			<div class="logobanner"><img src="../../images/readmebanner.png" alt="readmebanner"></div>
+			
+			<div>
+				<p class="navigation">
+					<a href="../../1-start.html">Start</a>&nbsp;
+					<a href="../../2-installation.html">Installation</a>&nbsp;
+					<a href="../../3-basics.html">In-Game Basics</a>&nbsp;
+					<a href="../../4-content-overview.html">Content Overview</a>&nbsp;
+					<a href="../../5-faq.html">FAQs</a>&nbsp;
+					<a href="../../6-glossary.html">Glossary</a>&nbsp;
+					<a href="../../7-history.html">History</a>&nbsp;
+					<a href="../../8-technical.html">Tech Info</a>&nbsp;
+					<a href="../../9-credits.html">Credits</a>&nbsp;
+					<a href="../quicklink.html">Feature Guides</a>
+				</p>
+			</div>
+			
+			<div class="bannerfull"><h4>&nbsp;RealRailway (RRW) Features</h4></div>
+			
+			<div class="regtext">
+<div style="text-align: center;">
+				<br>
+<span style="font-family: Helvetica,Arial,sans-serif;"><span style="font-weight: bold;">RealRailway (RRW)</span></span><br>
+</div>
+<p>The <strong>RealRailway</strong> or <strong>(RRW)</strong> is the new standard for rail transport in the NAM. The Real Railway surpasses the <strong>Maxis Rail</strong> and <strong>Railway Addon Mod (RAM)</strong>
+in favor of the Real Railway. The Real Railway is the only standard of
+rail that has continued work from the NAM Team since 2013 <strong>(NAM 32)</strong>. Many enhancements, such as FlexTrack, 
+Fractional Angled Rails (FARR), and the draggable Elevated RealRailway (ERRW) are products exclusive to the Real Railway.</p>
+
+<span style="font-family: Helvetica,Arial,sans-serif; font-weight: bold;">Preface</span><br>
+<br>
+<div style="text-align: left;">
+
+<p>The RealRailway started with the "mini-curves", which were to
+replace the existing Maxis curves and turnouts with more realistic
+looking versions. The gauge was also changed to represent standard
+gauge (1435 mm), which approximates to 12 pixels in absolute terms. The
+track spacing was also changed from 4 meters to 4.5 meters. The founder
+of the project, <strong>Swordmaster</strong>,
+determined the best way
+to make realistic railways by spacing out the tracks with the new gauge
+which makes the outer rails run flush with the Maxis rails but not with
+the inner rails. Such differences can be noticed by running the RRW
+base through an unconverted Transport Enabled lot or other unsupported
+tracks. The RealRailway was at first basic in appearance and
+functionality. Further enhancements have
+made the RealRailway surpass the functionality of Maxis Rail.<br>
+<br>
+Below is a snapshot from the initial 2013 RealRailway documentation and its
+reasoning behind the shift to the RealRailway...</p>
+
+
+<small><span style="font-family: Helvetica,Arial,sans-serif;">
+</span></small>
+<div style="text-align: center;"><img src="images/Real%20Railway-1.jpg" alt=""><br>
+<small style="font-family: Helvetica,Arial,sans-serif; font-style: italic;">image taken from the RealRailway 2013 documentation.</small><br>
+<br>
+<small><span style="font-family: Helvetica,Arial,sans-serif;">Notice how the road pieces line up with the real life road networks but the <em>Maxis</em> Rail does not!</span></small><br>
+<br>
+<img src="images/Real%20Railway-2.jpg" alt=""><br>
+<small style="font-family: Helvetica,Arial,sans-serif; font-style: italic;">image taken from the RealRailway 2013 documentation.<br>
+<br>
+</small><small style="font-family: Helvetica,Arial,sans-serif;">Extended </small><small style="font-family: Helvetica,Arial,sans-serif;">Radii from in the default curve for the RealRailway <span style="font-style: italic;">(308.48 px)</span> compared to the maxis rail <span style="font-style: italic;">(172.8 px)</span>.<br>
+</small>
+<div style="text-align: left;"><br>
+<h4 style="text-align: center;" class="leftheading">Basic Usage</h4>
+
+
+<p class="MsoNormal" style="margin-bottom: 0.0001pt; line-height: normal;"><span style="font-size: 10pt; font-family: &quot;Helvetica&quot;,&quot;sans-serif&quot;;">The RealRailway has the same characteristics as 
+the Maxis Rail, as well as covering the
+Puzzle Piece (PPs), wide radius curves (WRCs), Single Track Rail (STR), and large
+turnouts. <strong>Swordmaster</strong> made this available for easing the adoption of the
+Real Railway. Some draggable functionality has been changed to reflect the use
+of the mini-curves and their functionality. </span><span style="font-size: 12pt; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;"><o:p></o:p></span><small style="font-family: Helvetica,Arial,sans-serif;"></small><br>
+
+</p>
+
+
+<div style="text-align: left;"><div style="text-align: center;"><span style="font-weight: bold; font-family: Helvetica,Arial,sans-serif;">FlexTrack</span><br>
+<small><br style="font-family: Helvetica,Arial,sans-serif;">
+</small>
+<div style="text-align: left;"><small><span style="font-family: Helvetica,Arial,sans-serif;">NAM 33 full release arrived with the next installment of the next
+phase of the Real Railway known as FlexTrack. This continuation allowed
+for midrange to large Wide Radius Curves under the nomenclature of  <span style="font-style: italic;">MRC's</span> with Minicurves being the smallest at R1 to Large sweeping curves at R5. Patterns where derived to allow the curves to drawn
+out with the rail tool without having to go into the puzzle piece tab
+loop. R1, R2 and R3 can also be made into turnouts by drawing
+orthogonally from the orthogonal end while there is support for
+diagonal turnouts with R1 and R3. R4 and R5 do not support any turnouts
+with there sole function to be curves! Also a range of new turnout
+options were introduced with the RealRailway FlexTrack component. This
+allowed for new turnouts in tight situations where the former parts
+where not applicable or accessible. These improvements were spearheaded by </span><span style="font-weight: bold; font-family: Helvetica,Arial,sans-serif;">eggman121</span><span style="font-family: Helvetica,Arial,sans-serif;"> who developed the  new components. The base provided by </span><span style="font-weight: bold; font-family: Helvetica,Arial,sans-serif;">Swordmaster</span><span style="font-family: Helvetica,Arial,sans-serif;"> allowed for these integrations</span>. </small><br>
+<br>
+<div style="text-align: center;"><span style="font-family: Helvetica,Arial,sans-serif; font-weight: bold;">FlexTrack Patterns</span><br style="font-family: Helvetica,Arial,sans-serif;">
+
+
+<p class="MsoNormal" style="margin-bottom: 0.0001pt; line-height: normal;"><span style="font-size: 12pt; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;"><small><span style="font-family: Helvetica,Arial,sans-serif;">The
+FlexTrack currently relies on patterns to make the desired curves or turnouts/
+switches. While there is the advantage of not having to go into the menu to
+find the pieces they can be hard to find the right patterns with conflicts if
+the pieces are too close to each other. Testing the capabilities in a blank
+region is always helpful to get the right patterns for the FlexTrack component.</span><br style="font-family: Helvetica,Arial,sans-serif;">
+<br style="font-family: Helvetica,Arial,sans-serif;">
+<span style="font-family: Helvetica,Arial,sans-serif;">
+The patterns and resultants are shown below....</span></small>
+<br>
+<br></span></p>
+<div style="text-align: center;">
+<span style="font-size: 12pt; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;"><span style="font-family: Helvetica,Arial,sans-serif; font-weight: bold;">
+Curves.</span></span><br>
+
+<span style="font-size: 12pt; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;"></span><br>
+
+<span style="font-size: 12pt; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;">
+<br></span><img style="width: 757px; height: 168px;" src="images/FlexTrack/Curves/R2-P.jpg" alt=""><br>
+<br>
+<img style="width: 757px; height: 168px;" src="images/FlexTrack/Curves/R3-P.jpg" alt=""><br>
+<br>
+<img style="width: 757px; height: 193px;" src="images/FlexTrack/Curves/R4-P.jpg" alt=""><br>
+<br>
+<img style="width: 757px; height: 187px;" src="images/FlexTrack/Curves/R5-P.jpg" alt=""><br>
+<br>
+<img style="width: 757px; height: 112px;" src="images/FlexTrack/Curves/S2-P.jpg" alt=""><br>
+<br>
+<img style="width: 757px; height: 202px;" src="images/FlexTrack/Curves/S-D-P.jpg" alt=""><br>
+</div>
+
+
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+<span style="font-weight: bold; font-family: Helvetica,Arial,sans-serif;"><br></span>
+<div style="text-align: center;"><span style="font-weight: bold; font-family: Helvetica,Arial,sans-serif;">
+Turnouts</span><br>
+</div>
+
+<small><br style="font-family: Helvetica,Arial,sans-serif;">
+</small>
+<div style="text-align: left;"><small><span style="font-family: Helvetica,Arial,sans-serif;">The
+turnouts and switches come in all sorts of forms and there are a range
+of turnouts to use. They range from A1 Turnouts to large B2 extended
+turnouts as well. The set classes are shown in the table below</span>. <span style="font-family: Helvetica,Arial,sans-serif;">Not all the turnouts have been made. Some of the possibilities will need flex implementation to be realised</span>. <span style="font-family: Helvetica,Arial,sans-serif;">The table shown is just an example of the proposed turnouts</span>. <span style="font-family: Helvetica,Arial,sans-serif;">Additional turnouts have been made possible however for the Real Railway.</span><br>
+<br style="font-family: Helvetica,Arial,sans-serif;">
+</small></div>
+<div style="text-align: justify;">
+<div style="text-align: center;"><img style="width: 757px; height: 459px;" src="images/FlexTrack/rrw_sequence_table.jpg" alt=""><br>
+
+</div>
+<div style="text-align: center;"><small style="font-family: Helvetica,Arial,sans-serif; font-style: italic;">(Table of proposed turnouts for the RealRailway)</small><br>
+</div>
+<div style="text-align: center;"><br>
+<span style="font-weight: bold; font-family: Helvetica,Arial,sans-serif;">A Class Turnouts</span><br>
+<br>
+<img style="width: 757px; height: 135px;" src="images/FlexTrack/Turnouts/A/A1-P.jpg" alt=""><br>
+<br>
+<img style="width: 757px; height: 202px;" src="images/FlexTrack/Turnouts/A/A1-T1-Dual-P.jpg" alt=""><br>
+<br>
+<img style="width: 757px; height: 168px;" src="images/FlexTrack/Turnouts/A/A1-Dual-P.jpg" alt=""><br>
+<br>
+<img style="width: 757px; height: 135px;" src="images/FlexTrack/Turnouts/A/A2-P.jpg" alt=""><br>
+<br>
+<img style="width: 757px; height: 135px;" src="images/FlexTrack/Turnouts/A/A2-Dual-P.jpg" alt=""><br>
+<br>
+<img style="width: 757px; height: 112px;" src="images/FlexTrack/Turnouts/A/A2-T2-P.jpg" alt=""><br>
+<br>
+<img style="width: 757px; height: 96px;" src="images/FlexTrack/Turnouts/A/A2-T3-P.jpg" alt=""><br>
+<br>
+<img style="width: 757px; height: 135px;" src="images/FlexTrack/Turnouts/A/A2-X-P.jpg" alt=""><br>
+<br>
+<img style="width: 757px; height: 281px;" src="images/FlexTrack/Turnouts/A/A2-D-P.jpg" alt=""><br>
+<br>
+<span style="font-weight: bold; font-family: Helvetica,Arial,sans-serif;">B Class Turnouts</span><br>
+<br>
+<img style="width: 757px; height: 168px;" src="images/FlexTrack/Turnouts/B/B1-P.jpg" alt=""><br>
+<br>
+<img style="width: 757px; height: 168px;" src="images/FlexTrack/Turnouts/B/B2-R2-P.jpg" alt=""><br>
+<br>
+<img style="width: 757px; height: 168px;" src="images/FlexTrack/Turnouts/B/B2-R3-P.jpg" alt=""><br>
+<br>
+<img style="width: 757px; height: 202px;" src="images/FlexTrack/Turnouts/B/B1-D-P.jpg" alt=""><br>
+<br>
+<img style="width: 757px; height: 168px;" src="images/FlexTrack/Turnouts/B/B2-T2-P.jpg" alt=""><br>
+<br>
+<span style="font-weight: bold; font-family: Helvetica,Arial,sans-serif;">C Class Turnouts</span><br>
+<br>
+<img style="width: 757px; height: 135px;" src="images/FlexTrack/Turnouts/C/C1-P.jpg" alt=""><br>
+<br>
+<img style="width: 757px; height: 135px;" src="images/FlexTrack/Turnouts/C/C2-P.jpg" alt=""><br>
+<br>
+<img style="width: 757px; height: 202px;" src="images/FlexTrack/Turnouts/C/C2-FA3-P.jpg" alt=""><br>
+<br>
+<span style="font-weight: bold; font-family: Helvetica,Arial,sans-serif;">D Class Turnouts</span><br>
+<br>
+<img style="width: 757px; height: 96px;" src="images/FlexTrack/Turnouts/D/D1-P.jpg" alt=""><br>
+<br>
+<img style="width: 757px; height: 84px;" src="images/FlexTrack/Turnouts/D/D2-P.jpg" alt=""><br>
+<br>
+<span style="font-weight: bold; font-family: Helvetica,Arial,sans-serif;">E Class Turnouts</span><br>
+<br>
+<img style="width: 757px; height: 168px;" src="images/FlexTrack/Turnouts/E/E1-P.jpg" alt=""><br>
+<br>
+<img style="width: 757px; height: 168px;" src="images/FlexTrack/Turnouts/E/E2-P.jpg" alt=""><br>
+<br>
+<big style="font-family: Helvetica,Arial,sans-serif; font-weight: bold;">Combination Turnouts</big><br>
+<br>
+<img style="width: 757px; height: 168px;" src="images/FlexTrack/Turnouts/F_Combination/CC-R2S-R3-P.jpg" alt=""><br>
+<br>
+<img style="width: 757px; height: 168px;" src="images/FlexTrack/Turnouts/F_Combination/CC-R3-R2-P.jpg" alt=""><br>
+<br>
+<img style="width: 757px; height: 224px;" src="images/FlexTrack/Turnouts/F_Combination/D2-CC-P.jpg" alt=""><br>
+<br>
+<big><span style="font-weight: bold; font-family: Helvetica,Arial,sans-serif;">FARR-2 Alternative implementation</span></big><br>
+<br>
+<div style="text-align: left;"><small style="font-family: Helvetica,Arial,sans-serif;">The
+FARR-2 Alt has the same angle as the normal FARR-2 but has a different
+base and pattern. Also the geometry is slightly different and can make
+complex turnouts as shown further in the document. The FARR-2
+Alternative implementation is considered a FlexTrack item.</small><span style="font-family: Helvetica,Arial,sans-serif;"> </span><small style="font-family: Helvetica,Arial,sans-serif;">Below are the various setups</small><span style="font-family: Helvetica,Arial,sans-serif;">.<small>
+The base for the FARR-2 Alt is the zig zag base and is designed for
+flat surfaces only. This section of track has no tolerance for slopes!</small></span><small><br>
+</small><br>
+<img style="width: 757px; height: 202px;" src="images/FlexTrack/FARR/FA-2-Alt/Alt-FA-2-P.jpg" alt=""><br>
+<br>
+<img style="width: 757px; height: 202px;" src="images/FlexTrack/FARR/FA-2-Alt/Alt-FA-2-O-P.jpg" alt=""><br>
+<br>
+<img style="width: 757px; height: 336px;" src="images/FlexTrack/FARR/FA-2-Alt/Alt-FA-2-D-P.jpg" alt=""><br>
+<br>
+<img style="width: 757px; height: 202px;" src="images/FlexTrack/FARR/FA-2-Alt/Alt-FA-2-G2-P.jpg" alt=""><br>
+</div>
+<br>
+<big style="font-family: Helvetica,Arial,sans-serif;"><span style="font-weight: bold;">Small Complex Turnouts</span></big><br>
+<br>
+<div style="text-align: left;"><small><span style="font-family: Helvetica,Arial,sans-serif;">The
+small complex turnouts compliments the FARR-2 Alt with turnout setups
+that cross double track rail DTR with both single track rail STR and
+DTR variants. Upgrading to DTR involves drawing through the middle
+pointsas shown by the red arrow. </span></small><br>
+</div>
+
+<br>
+<span style="font-family: Helvetica,Arial,sans-serif;"></span><img style="width: 757px; height: 289px;" src="images/FlexTrack/Turnouts/S/ST-3-P.jpg" alt=""><br>
+<br>
+<img style="width: 757px; height: 289px;" src="images/FlexTrack/Turnouts/S/ST-O-P.jpg" alt=""><br>
+<br>
+<img style="width: 757px; height: 405px;" src="images/FlexTrack/Turnouts/S/ST-D-P.jpg" alt=""><br>
+<br>
+<big style="font-family: Helvetica,Arial,sans-serif;"><span style="font-weight: bold;">Fractional Angled Rail Road</span></big><br>
+<br>
+<img src="images/Real%20Railway-3.jpg" alt=""><br>
+<br>
+<div style="text-align: left;"><small><span style="font-family: Helvetica,Arial,sans-serif;">The
+Fractional angled Rail Road (FARR) as it will be referenced from now is
+the angled sections of track that conform to three angles to compiment
+the orthogonal (0 degrees) and diagional (45 degrees). They are FARR-3
+(18.43 degrees), FARR-2 (26.56 degrees) and FARR-1.5/1.33 (33.69
+degrees). At the time of writing this document the FARR is only able to
+be drawn
+out using the rail tool. Flex pieces for these sections of track are
+anticipated but will arrive in a future edition of the NAM.</span><br style="font-family: Helvetica,Arial,sans-serif;">
+<br style="font-family: Helvetica,Arial,sans-serif;">
+<span style="font-family: Helvetica,Arial,sans-serif;">Patterns are shown below...</span></small><br>
+<br>
+<div style="text-align: center;"><span style="font-family: Helvetica,Arial,sans-serif; font-weight: bold;">FARR-3</span><br>
+<br>
+<span style="font-family: Helvetica,Arial,sans-serif; font-style: italic;">FARR-3 Stright</span><br>
+<br>
+<img style="width: 757px; height: 168px;" src="images/FlexTrack/FARR/FA-3/FA-3-O-P.jpg" alt=""><br>
+<span style="font-family: Helvetica,Arial,sans-serif; font-style: italic;"><br>
+FARR-3 to Orthogonal</span><br>
+<br>
+<img style="width: 757px; height: 135px;" src="images/FlexTrack/FARR/FA-3/O-FA-3-P.jpg" alt=""><br>
+<br>
+<span style="font-family: Helvetica,Arial,sans-serif; font-style: italic;">FARR-3 to Diagonal<br>
+<br>
+</span><img style="width: 757px; height: 202px;" src="images/FlexTrack/FARR/FA-3/D-FA-3-P.jpg" alt=""><br>
+<br>
+
+<span style="font-family: Helvetica,Arial,sans-serif; font-style: italic;">FARR-3 to FARR-2</span><br style="font-family: Helvetica,Arial,sans-serif;">
+<br style="font-family: Helvetica,Arial,sans-serif;">
+<img style="width: 757px; height: 202px;" src="images/FlexTrack/FARR/FA-3/FA-3-FA-2-P.jpg" alt=""><br>
+<br>
+<span style="font-family: Helvetica,Arial,sans-serif; font-weight: bold;">FARR-2<br>
+<br>
+</span><span style="font-family: Helvetica,Arial,sans-serif; font-style: italic;">FARR-2 Stright</span><br>
+<span style="font-family: Helvetica,Arial,sans-serif; font-weight: bold;"><br>
+</span><img style="width: 757px; height: 252px;" src="images/FlexTrack/FARR/FA-2/FA-2-O-P.jpg" alt=""><br>
+<br>
+<span style="font-family: Helvetica,Arial,sans-serif; font-style: italic;">FARR-2 to Orthogonal<br>
+<br>
+</span><img style="width: 757px; height: 168px;" src="images/FlexTrack/FARR/FA-2/O-FA-2-P.jpg" alt=""><br>
+<br>
+<span style="font-family: Helvetica,Arial,sans-serif; font-style: italic;">FARR-2 to Diagonal</span><br>
+<br>
+<img style="width: 757px; height: 336px;" src="images/FlexTrack/FARR/FA-2/D-FA-2-P.jpg" alt=""><br>
+<br>
+<span style="font-family: Helvetica,Arial,sans-serif; font-style: italic;">FARR-2 to FARR-1.5/1.33<br>
+<br>
+</span><img style="width: 757px; height: 252px;" src="images/FlexTrack/FARR/FA-2/FA-2-FA-1.5-P.jpg" alt=""><br>
+<span style="font-family: Helvetica,Arial,sans-serif; font-style: italic;"><br>
+</span><span style="font-family: Helvetica,Arial,sans-serif; font-style: italic;">FARR-2 G2 Tunout</span><br>
+<br>
+<img style="width: 757px; height: 135px;" src="images/FlexTrack/FARR/FA-2/G2-T-P.jpg" alt=""><br>
+<br>
+<span style="font-family: Helvetica,Arial,sans-serif; font-weight: bold;">FARR-1.5/1.33<br>
+</span><span style="font-family: Helvetica,Arial,sans-serif; font-weight: bold;"><br>
+</span><span style="font-family: Helvetica,Arial,sans-serif; font-style: italic;">FARR-1.5/1.33 Stright<br>
+<br>
+</span><img style="width: 757px; height: 202px;" src="images/FlexTrack/FARR/FA-1.5/FA-1.5-P.jpg" alt=""><br>
+<span style="font-family: Helvetica,Arial,sans-serif; font-weight: bold;"><br>
+</span><span style="font-family: Helvetica,Arial,sans-serif; font-style: italic;">FARR-1.5/1.33 to Orthogonal<br>
+<br>
+</span><img style="width: 757px; height: 202px;" src="images/FlexTrack/FARR/FA-1.5/FA-1.5-O-P.jpg" alt=""><br>
+<span style="font-family: Helvetica,Arial,sans-serif; font-weight: bold;"><br>
+</span><span style="font-family: Helvetica,Arial,sans-serif; font-style: italic;">FARR-1.5/1.33 to Diagonal<br>
+<br>
+</span><img style="width: 757px; height: 269px;" src="images/FlexTrack/FARR/FA-1.5/FA-1.5-D-P.jpg" alt=""><br>
+<br>
+<span style="font-family: Helvetica,Arial,sans-serif; font-style: italic;">FARR-1.5/1.33 J2 Tunout</span><br>
+<br>
+<img style="width: 757px; height: 202px;" alt="" src="images/FlexTrack/FARR/FA-1.5/J2-T-P.jpg"><br>
+<br>
+</div>
+</div>
+<big style="font-weight: bold; font-family: Helvetica,Arial,sans-serif;">Elevated Real Railway (ERRW)</big><br>
+<br>
+<div style="text-align: left;"><small><span style="font-family: Helvetica,Arial,sans-serif;">The
+next installment of the Real Railway (RRW) implementation is the
+elevated real railway (ERRW). As oppose to using puzzle pieces the ERRW
+is the draggable format of the heavy rail
+viaducts. Use is slightly different in that the ERRW uses overrides to
+work using the DTR as the Base. There are two levels for the ERRW
+including the 15.5 meter height and the new 7.5 m height. At the moment
+the two levels are independent and therefore cannot be joined together
+from an elevated height. </span><br style="font-family: Helvetica,Arial,sans-serif;">
+<br style="font-family: Helvetica,Arial,sans-serif;">
+<span style="font-family: Helvetica,Arial,sans-serif;">Both variants include support for some minicurves and multi radius curves. The MRC's supported are Radius (1, 2 and 3).</span><br style="font-family: Helvetica,Arial,sans-serif;">
+<br style="font-family: Helvetica,Arial,sans-serif;">
+<span style="font-family: Helvetica,Arial,sans-serif;">The ERRW pieces can be found in this menu near the top of the Rail menu in the picture shown below...</span><br style="font-family: Helvetica,Arial,sans-serif;">
+<br style="font-family: Helvetica,Arial,sans-serif;">
+</small>
+<div style="text-align: center;"><small><img style="font-family: Helvetica,Arial,sans-serif;" src="images/FlexTrack/ERRW/1.jpg" alt=""><br style="font-family: Helvetica,Arial,sans-serif;">
+<br style="font-family: Helvetica,Arial,sans-serif;">
+<span style="font-family: Helvetica,Arial,sans-serif;">There are 4 main elevated transitions conforming to the on slope standard</span><br style="font-family: Helvetica,Arial,sans-serif;">
+<br style="font-family: Helvetica,Arial,sans-serif;">
+<span style="font-family: Helvetica,Arial,sans-serif;">Orthogonal Transitions</span><br style="font-family: Helvetica,Arial,sans-serif;">
+<br style="font-family: Helvetica,Arial,sans-serif;">
+<img style="font-family: Helvetica,Arial,sans-serif;" src="images/FlexTrack/ERRW/2.jpg" alt=""><br style="font-family: Helvetica,Arial,sans-serif;">
+<br style="font-family: Helvetica,Arial,sans-serif;">
+<span style="font-family: Helvetica,Arial,sans-serif;">Diagonal Transitions</span><br style="font-family: Helvetica,Arial,sans-serif;">
+<br style="font-family: Helvetica,Arial,sans-serif;">
+<img style="font-family: Helvetica,Arial,sans-serif;" src="images/FlexTrack/ERRW/3.jpg" alt=""></small><br>
+<br>
+<big style="font-family: Helvetica,Arial,sans-serif;"><span style="font-weight: bold;">Usage</span></big> <big style="font-weight: bold; font-family: Helvetica,Arial,sans-serif;">of the ERRW</big><br>
+<br>
+<div style="text-align: left;"><small style="font-family: Helvetica,Arial,sans-serif;">The rail is not to be drawn through the transition but to the stub at each end shown in the pictures below...<br>
+<br>
+</small>
+<div style="text-align: center;"><small style="font-family: Helvetica,Arial,sans-serif;"><img src="images/FlexTrack/ERRW/4.jpg" alt=""><br>
+<br>
+</small>
+<div style="text-align: left; font-family: Helvetica,Arial,sans-serif;"><small>White represents the adjoining stub connections while Black represents the network you want to cross.<br>
+<br>
+The same principle is used for the Diagonal on slope transitions.<br>
+</small></div>
+<small style="font-family: Helvetica,Arial,sans-serif;"><br>
+<img src="images/FlexTrack/ERRW/5.jpg" alt=""></small><br>
+<br>
+<div style="text-align: left; font-family: Helvetica,Arial,sans-serif;"><small>Upon a successful draw you should see something like this...<br>
+</small></div>
+<small style="font-family: Helvetica,Arial,sans-serif;"><br>
+<img src="images/FlexTrack/ERRW/6.jpg" alt=""><br>
+<br>
+</small>
+<div style="text-align: left;"><small style="font-family: Helvetica,Arial,sans-serif;">This is the preview of the ERRW before placing it. Previews are used for the majority of the ERRW and work in most instances.<br>
+</small><br>
+<div style="text-align: center; font-weight: bold; font-family: Helvetica,Arial,sans-serif;"><big>Curves<br>
+<br style="font-weight: bold;">
+</big><br>
+<div style="text-align: left;"><small><span style="font-weight: normal;">As mentioned above the R1, R2 and R3 curves can have overrides at each level for making elevated smooth curves</span></small>. <small style="font-family: Helvetica,Arial,sans-serif; font-weight: normal;">They use the flextrack base to work so they only work with the RRW flextrack curves</small>.<br>
+<br>
+<div style="text-align: center;">R1 Curve<br>
+</div>
+<div style="text-align: center;"><img src="images/FlexTrack/ERRW/7-0.jpg" alt=""><br>
+<br>
+<img src="images/FlexTrack/ERRW/7-1.jpg" alt=""><br>
+<br>
+R2 Curve<br>
+<br>
+<img src="images/FlexTrack/ERRW/8-0.jpg" alt=""><br>
+<img src="images/FlexTrack/ERRW/8-1.jpg" alt=""><br>
+<br>
+R3 Curve<br>
+<br>
+<img src="images/FlexTrack/ERRW/9-0.jpg" alt=""><br>
+<br>
+<img style="width: 666px; height: 462px;" src="images/FlexTrack/ERRW/9-1.jpg" alt=""><br>
+<br>
+MiniCurves<br>
+<br>
+<div style="text-align: left;"><small><span style="font-weight: normal;">Some Minicurves and Mini Turnouts can be override to have elevated turnouts. Only some are shown below...</span></small><br>
+<br>
+<div style="text-align: center;">A2 Turnout<br>
+</div>
+<div style="text-align: center;"><img src="images/FlexTrack/ERRW/A-0.jpg" alt=""><br>
+<img src="images/FlexTrack/ERRW/A-1.jpg" alt=""><br>
+<br>
+B2 Turnout<br>
+<br>
+<img src="images/FlexTrack/ERRW/B-0.jpg" alt=""><br>
+<img src="images/FlexTrack/ERRW/B-1.jpg" alt=""><br>
+<br>
+A2 Wye Turnout<br>
+<br>
+<img src="images/FlexTrack/ERRW/C-0.jpg" alt=""><br>
+<img src="images/FlexTrack/ERRW/C-1.jpg" alt=""><br>
+<br>
+<span style="font-weight: bold;"><big>Important notice!!!</big><br>
+<br>
+</span>
+<div style="text-align: left;"><span style="font-weight: bold;"></span><small><span style="font-weight: normal;">When crossing other networks a rail piece <span style="font-weight: bold;">MUST!</span>
+be placed on the concerning tile if you are crossing a non rail network.
+This is due to the fact that rail code must be present in the network.
+Level crossings (LX) overridden by the ERRW are exempt however. A
+picture of what you should do is shown below...</span></small><br>
+<br>
+<div style="text-align: center;"><img src="images/FlexTrack/ERRW/D.jpg" alt=""><br>
+<small><br style="font-weight: normal;">
+<span style="font-weight: normal;">Of course this action is not needed if the network being crossed is the Rail network itself</span></small>.<br>
+<br>
+<img src="images/FlexTrack/ERRW/E.jpg" alt=""><br>
+<br>
+Credits <br>
+<br>
+<div style="text-align: left;"><span style="font-weight: normal;">The following members have had an impact on the development of the RealRailway Mod and are listed below.<br>
+</span><br style="font-weight: normal;">
+<span style="font-weight: normal;">&#8226; Swordmaster</span><br style="font-weight: normal;">
+<span style="font-weight: normal;">&#8226; eggman121</span><br>
+<span style="font-weight: normal;">&#8226; mgb204</span>/<span style="font-weight: normal;">rsc204</span><br style="font-weight: normal;">
+<span style="font-weight: normal;">&#8226; woodb3kmaster</span><br style="font-weight: normal;">
+<span style="font-weight: normal;">&#8226; Tarkus</span><br style="font-weight: normal;">
+<span style="font-weight: normal;">&#8226; memo</span><br style="font-weight: normal;">
+<span style="font-weight: normal;">&#8226; Shadow Assassin</span><br style="font-weight: normal;">
+<span style="font-weight: normal;">&#8226; rivit</span><br>
+<span style="font-weight: normal;">&#8226; Simmer2</span><br style="font-weight: normal;">
+
+<span style="font-weight: normal;"> </span><br style="font-weight: normal;">
+<span style="font-weight: normal;">Without their help, directly or indirectly, these projects for the Real Railway would not have taken off.</span><br>
+</div>
+</div>
+<span style="font-weight: bold;"></span></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+
+</div>
+
+</div>
+</div>
+</div>
+</div>
+			
+			<div class="bannerfull"><h4></h4></div>
+			
+			<div>
+				<p class="navigation">
+					<a href="../../1-start.html">Start</a>&nbsp;
+					<a href="../../2-installation.html">Installation</a>&nbsp;
+					<a href="../../3-basics.html">In-Game Basics</a>&nbsp;
+					<a href="../../4-content-overview.html">Content Overview</a>&nbsp;
+					<a href="../../5-faq.html">FAQs</a>&nbsp;
+					<a href="../../6-glossary.html">Glossary</a>&nbsp;
+					<a href="../../7-history.html">History</a>&nbsp;
+					<a href="../../8-technical.html">Tech Info</a>&nbsp;
+					<a href="../../9-credits.html">Credits</a>&nbsp;
+					<a href="../quicklink.html">Feature Guides</a>
+				</p>
+			</div>
+			
+			<div class="footer"><p>&nbsp;©2017 NAM Team</p></div>
+		
+	</body></html>

@@ -1,0 +1,7 @@
+A bridge obstruction conflict with UDI mode has been fixed. Please, remove your old "NetworkAddonMod_Tsing_Ma_Bridge.dat" with the one included in this zip.
+
+Sorry for the inconveniences.
+
+Special thanks to threestooges and chocho for his help fixing this issue.
+
+jeronij

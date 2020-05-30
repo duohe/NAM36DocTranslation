@@ -1,0 +1,442 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+		<title>Network Addon Mod - High Speed Rail Project (HSRP) Feature Guide</title>
+		<link rel="stylesheet" type="text/css" href="../../namdoc.css">
+	</head>
+
+	<body>
+		<div class="main">
+			<div class="logobanner"><img src="../../images/readmebanner.png" alt="readmebanner"></div>
+			
+			<div>
+				<p class="navigation">
+					<a href="../../1-start.html">Start</a>&nbsp;
+					<a href="../../2-installation.html">Installation</a>&nbsp;
+					<a href="../../3-basics.html">In-Game Basics</a>&nbsp;
+					<a href="../../4-content-overview.html">Content Overview</a>&nbsp;
+					<a href="../../5-faq.html">FAQs</a>&nbsp;
+					<a href="../../6-glossary.html">Glossary</a>&nbsp;
+					<a href="../../7-history.html">History</a>&nbsp;
+					<a href="../../8-technical.html">Tech Info</a>&nbsp;
+					<a href="../../9-credits.html">Credits</a>&nbsp;
+					<a href="../quicklink.html">Feature Guides</a>
+				</p>
+			</div>
+			
+			<div class="bannerfull"><h4>&nbsp;High Speed Rail Features</h4></div>
+			
+			<div class="regtext">
+				<p>The High Speed Rail Project (HSRP) adds two new &ldquo;model variations&rdquo; to the network systems. A models variation is a new set of models for a network in this case for Monorail. 
+				In the early years of SC4, new technology was found by Smoncrie which allowed us to use a single puzzle piece to create a starter for a new set of textures or models for the same network, 
+				there are already a few mods that take advantage of this technology, namely draggable GLR, SAM, and RHW. At the moment, there are two new model variations included in this mod, HSR, elevated, and GHSR, 
+				a ground version.</p>
+				
+				<p>The original HSRP replaced Monorail.  At the time this was the best way of implementation, and was created by 3ddz, founded by Murakamon, on the 24th of February 2006.  Since then there 
+				has only been one release, HSRP Beta 1. This mod uses the original models from that release for HSR, and a lowered version for GHSR. No other modifications were made to the models.</p>
+				
+				<p><em>NOTE: The High Speed Rail Project, in its current form, is no longer in active development.  Plans for future HSR-type functionality are still being determined as of NAM Version 36.</em></p>
+			</div>
+			
+			<span><img class="screenshot" src="images/HSRP_01.jpg" alt="HSRP_01">&nbsp;<img class="screenshot" src="images/HSRP_02.jpg" alt="HSRP_02"></span>
+			
+			<div class="bannerfull"><h4>&nbsp;Table of Contents</h4></div>
+			<div class="regtext">
+				<ul class="paddedlist">
+					<li><a href="#installation">Installing the High Speed Rail Project from the NAM Installer</a></li>
+					<li><a href="#networks">HSR Override Networks</a></li>
+					<li><a href="#capacities">Capacities and Speeds</a></li>
+					<li><a href="#automata">A Note Regarding Automata</a></li>
+					<li><a href="#bridges">Bridges</a></li>
+					<li><a href="#tunnels">Tunnels</a></li>
+					<li><a href="#capabilities">Network Capabilities</a></li>
+					<li><a href="#stations">Stations</a></li>
+					<li><a href="#menu">List of Menu Items</a></li>
+					<li><a href="#knownissues">Known Issues</a></li>
+					<li><a href="#support-development">Information on Support and Development Updates</a></li>
+				</ul>
+			</div>
+			
+			<div class="bannerfull"><a name="installation"></a><h4>&nbsp;Installing the High Speed Rail Project from the NAM Installer</h4></div>
+			<div class="regtext">
+				<p>To install the High Speed Rail Project via Custom Installation, under the "NAM Networks and Network Expansions" section, simply select the "High Speed Rail Project" option.  This box is automatically selected
+				if one chooses the "Networks and Traffic Simulator" or "Complete Installation" options.</p>
+				
+				<img class="screenshot" src="images/hsr-installer1.jpg" alt="HSR Installation">		
+				
+				<p>The High Speed Rail Project also includes a custom darker texture option, made by <strong>vershner</strong>.  This option can be selected under the "Additional Features and Customizations" section.</p>
+
+				<img class="screenshot" src="images/hsr-installer2.jpg" alt="HSR Optional Feature Installation">		
+
+			</div>
+			
+			<div class="bannerfull"><a name="networks"></a><h4>&nbsp;HSR Override Networks</h4></div>
+			<div class="regtext">
+			
+				<p>The High Speed Rail Project includes a total of two Monorail-based draggable override networks: the (Elevated) High Speed Rail network (HSR), which consists of an elevated track at a height of 15.5 meters (functionally equivalent
+				to "Level 2" in NAM elevation nomenclature), and the Ground High Speed Rail network (GHSR), which sits essentially at ground level, at 1 meter elevation.</p>
+				
+				<img class="screenshot" src="images/hsr-networks.jpg" alt="HSR Networks">		
+				
+				<p>To build an HSR override network, first place the appropriate starter piece from the menu, then select the Monorail network tool, and drag Monorail through the starter.  The stretch of Monorail should
+				convert to the appropriate HSR network at that point.</p>
+				
+				<a href="images/hsr-starter.jpg"><img class="screencenter" src="images/hsr-starter.jpg" alt="HSR Starter Usage"></a>
+				
+				<p>Curves to diagonals can also be accomplished through simple dragging motions, as with any other draggable network.  HSR has been designed to have a slightly wider radius for its default curve, which
+				should be taken into consideration when building over/underpasses near curves.</p>
+				
+				<a href="images/hsr-diagonal.jpg"><img class="screencenter" src="images/hsr-diagonal.jpg" alt="HSR Diagonal Usage"></a>
+				
+				<p>Supported draggable crossing setups can be built much in the same way that Monorail crossings are, by simply dragging the HSR tracks over (or under) the desired network as appropriate.  Due to game limitations,
+				the crossing will initially show as a Monorail crossing in the preview, but provided the setup is supported, it will change to the appropriate HSR override network.  HSR networks 
+				cannot cross other networks at the same height level, as grade separation is key to allowing the trains to operate at high speeds.  Both HSR and GHSR, however, can cross over or under an L1 elevated network,
+				such as the L1 RealHighway shown below.</p>  
+				
+				<a href="images/hsr-crossing.jpg"><img class="screencenter" src="images/hsr-crossing.jpg" alt="HSR Crossing"></a>
+				
+				<a href="images/ghsr-crossing.jpg"><img class="screencenter" src="images/ghsr-crossing.jpg" alt="GHSR Crossing"></a>
+
+				
+				<p>If a crossing reverts back to the base Monorail network, or results in a "blank spot" in the network, it is a sign that the particular setup is not supported by the plugin.  Refer to the <a href="#capabilities">
+				Network Capabilities</a> section of this document for guidance.  Note that some setups  not possible through draggable means can be constructed through the use of static puzzle pieces 
+				(see <a href="#menu">List of Menu Items</a> below.</p>	
+			</div>
+			
+			<div class="bannerfull"><a name="capacities"></a><h4>&nbsp;Capacities and Speeds</h4></div>
+			<div class="regtext">
+				<p>The capacity and speed of both the Elevated and Ground High Speed Rail override networks is identical to that of the base Monorail network.  The precise capacity 
+				depends on the <a href="../traffic-sim/traffic-sim.html">Traffic Plugin</a> one has installed. Capacity is generally calculated on a per tile basis by the game.</p>
+				
+				<h5 class="leftheading">Capacities</h5>
+				
+				<table>
+					<tr class="tablerow-alt">
+						<th>HSR Network Type</th>
+						<th class="tenwidth">Classic</th>
+						<th class="tenwidth">Low</th>
+						<th class="tenwidth">Medium</th>
+						<th class="tenwidth">High</th>
+						<th class="tenwidth">Ultra</th>
+					</tr>
+					<tr>
+						<td>All</td>
+						<td class="tenwidth">3000</td>
+						<td class="tenwidth">10000</td>
+						<td class="tenwidth">16000</td>
+						<td class="tenwidth">30000</td>
+						<td class="tenwidth">65200</td>
+					</tr>
+				</table>
+					
+				<h5 class="leftheading">Speed</h5>
+				
+				<table>
+					<tr class="toprow"><td>Vehicle Type</td><td>Speed</td></tr>
+					<tr><td>HSR Train</td><td>220</td></tr>
+				</table>
+				
+
+			</div>
+			
+			<div class="bannerfull"><a name="automata"></a><h4>&nbsp;A Note Regarding Automata</h4></div>
+			<div class="regtext">
+				<p>As the High Speed Rail Project's override networks are Monorail-based, Monorail automata will appear on HSR tracks by default.  If one wishes to change the appearance of the HSR trains,
+				are several third-party HSRP automata skins available (which probably look nice on your Monorail tracks as well).  One such set is the <a href="http://sc4devotion.com/csxlex/lex_filedesc.php?lotGET=2975">VDK Train Mods Vol 7</a> 
+				pack by NAM Team member <strong>vester</strong>.</p>
+			</div>
+			
+			<div class="bannerfull"><a name="bridges"></a><h4>&nbsp;Bridges</h4></div>
+			<div class="regtext">
+				<p>The High Speed Rail Project supports several different types of bridges, for both the elevated HSR network and GHSR.  To build the bridges, 
+				simply drag the Monorail network across the body of water (or sufficiently deep canyon), and options for HSR bridges will appear.</p>
+				
+				<h5 class="leftheading">HSR Bridges</h5>
+				
+				<ul>
+					<li>Cable-Stayed HSR Bridge</li>
+					<li>HSR Bridge</li>
+					<li>Bailey Truss HSR Bridge</li>
+					<li>Concrete HSR Bridge</li>
+					<li>High Speed Rail Suspension Bridge</li>
+				</ul>
+				
+				<a href="images/hsr-bridges1.jpg"><img class="screencenter" src="images/hsr-bridges1.jpg" alt="HSR Bridges"></a>
+				
+				<h5 class="leftheading">GHSR Bridges</h5>
+				
+				<ul>
+					<li>GHSR Bridge</li>
+					<li>Concrete GHSR Bridge</li>
+					<li>Warren Thru-Truss GHSR Bridge</li>
+					<li>Box Girder GHSR Bridge</li>
+					<li>Cable-Stayed GHSR Bridge</li>
+				</ul>
+				
+				<a href="images/hsr-bridges2.jpg"><img class="screencenter" src="images/hsr-bridges2.jpg" alt="GHSR Bridges"></a>
+
+			</div>
+
+			<div class="bannerfull"><a name="tunnels"></a><h4>&nbsp;Tunnels</h4></div>
+			<div class="regtext">
+				<p>Being based on the Monorail network, HSR and GHSR do <strong>NOT</strong> support the construction of properly functioning tunnels.  However, one can convert to the Subway network from HSR by using third-party lots,
+				such as the <a href="http://sc4devotion.com/csxlex/lex_filedesc.php?lotGET=2040">HSRP Subway Converters</a> by <strong>ebina</strong> and <strong>3ddz</strong>.</p>
+			</div>
+			
+			<div class="bannerfull"><a name="capabilities"></a><h4>&nbsp;Network Capabilities</h4></div>
+			<div class="regtext">
+				<h4 class="leftheading"></a>&nbsp;Capabilities of Each Network</h4>
+				<h5 class="leftheading">KEY</h5>
+				<table>
+					<tr>
+						<td class="table-yes">Yes</td><td class="tablerow-alt">This particular feature can be constructed, with minimal (if any) limitations.</td>
+					</tr>
+					<tr>
+						<td class="table-partial">Partial Support</td><td class="tablerow-alt">This particular feature can be constructed, but not in all instances.  Details will be given as to what is/is not possible.
+						Partial support may be for intentional design reasons (such as realism or general unfeasibility), or simply because the feature has not been fully developed.</td>
+					</tr>
+					<tr>
+						<td class="table-limited">Limited Support</td><td class="tablerow-alt">This particular feature can be constructed, but only in extremely limited circumstances.  Instances that are possible may be listed,
+						insofar as it is possible.  Use at your own risk.</td>
+					</tr>
+					<tr>
+						<td class="table-no">No Support</td><td class="tablerow-alt">This particular feature cannot be constructed.  This restriction could be for intentional design reasons (such as realism, 
+						or general unfeasibility), or simply because it has not yet been developed.</td>
+					</tr>
+				</table>
+				<h5 class="leftheading">ADDITIONAL NOTES</h5>
+					<p><strong>OxO</strong>: OxO stands for "orthogonal x orthogonal", and refers to a situation where both networks are orthogonal (in a straight line) along the game's grid, intersecting perpendicularly 
+					(at 90° angles at all corners)</p>
+					<p><strong>OxD</strong>: OxD stands for "orthogonal x diagonal", and refers to a situation where the given network is orthogonal (in a straight line) along the game's grid, and the cross network is diagonal
+					(running at a 45° angle).</p>
+					<p><strong>DxO</strong>: DxO stands for "diagonal x orthogonal", and refers to a situation where the base network is diagonal (running at a 45° angle), and the cross network is orthogonal (in a straight line) 
+					along the game's grid.</p>
+					<p><strong>DxD</strong>: DxD stands for "diagonal x diagonal", and refers to a situation where both networks are diagonal (running at a 45° angle) along the game's grid, intersecting perpendicularly 
+					(at 90° angles at all corners)</p>
+
+				<h4 class="leftheading">Base Network Features</h4>
+					<table>
+						<tr class="tablerow-alt">
+							<th>NETWORK</th><th>Base Orthogonals</th><th>Base Diagonals</th><th>Ortho 90° Bend</th><th>Ortho S-Curve</th><th>Diag 90° "Boomerang" Bend</th><th>Diag S-Curve</th>
+						</tr>
+						<tr>
+							<th>HSR</th><td class="table-yes">Yes</td><td class="table-yes">Yes</td><td class="table-no">No</td><td class="table-no">No</td><td class="table-no">No</td><td class="table-no">No</td>
+						</tr>
+						<tr class="tablerow-alt">
+							<th>GHSR</th><td class="table-yes">Yes</td><td class="table-yes">Yes</td><td class="table-no">No</td><td class="table-no">No</td><td class="table-no">No</td><td class="table-no">No</td>
+						</tr>
+					</table>
+					
+				<h4 class="leftheading">Intersections/Crossings</h4>
+					<table>
+						<tr class="tablerow-alt-leftalign">
+							<th>Network</th>
+							<th>Draggable At-Grade Intersections (RD/OWR/AVE/NWM/Rail/GLR)</th>
+							<th>Draggable Crossings (Elevated Rail/Monorail/HSR/RD-OWR-AVE-Rail Viaducts)</th>
+							<th>OxO with RHWs at Other Heights</th>
+							<th>OxD/DxO with RHWs at Other Heights</th>
+							<th>DxD with RHWs at Other Heights</th>
+							<th>Bridges over Water</th>
+						</tr>
+						<tr>
+							<th>HSR</th>
+							<td class="table-no">No</td>
+							<td class="table-partial">OxO Only for Draggable, some diagonal options in puzzle pieces.  SAM crossings entirely puzzle-based.</td>
+							<td class="table-yes">Yes</td>
+							<td class="table-no">No</td>
+							<td class="table-no">No</td>
+							<td class="table-yes">Yes</td>
+						</tr>
+						<tr class="tablerow-alt">
+							<th>GHSR</th>
+							<td class="table-no">No</td>
+							<td class="table-limited">Puzzle Pieces Only</td>
+							<td class="table-yes">Yes</td>
+							<td class="table-no">No</td>
+							<td class="table-no">No</td>
+							<td class="table-yes">Yes</td>
+						</tr>
+					</table>
+					
+				<h4 class="leftheading">Curves</h4>
+					<table>
+						<tr class="tablerow-alt-leftalign">
+							<th>Network</th>
+							<th>Wider Radius 45° Curve</th>
+							<th>S-Curve</th>
+							<th>90° Curve</th>
+						</tr>
+						<tr>
+							<th>HSR</th>
+							<td class="table-yes">Yes, default draggable setup</td>
+							<td class="table-no">OxO Only for Draggable, some diagonal options in puzzle pieces.  SAM crossings entirely puzzle-based.</td>
+							<td class="table-no">No</td>
+						</tr>
+						<tr class="tablerow-alt">
+							<th>GHSR</th>
+							<td class="table-yes">Yes, default draggable setup</td>
+							<td class="table-partial">Puzzle Piece Only</td>
+							<td class="table-no">No</td>
+						</tr>
+					</table>
+					
+				<h4 class="leftheading">Tunnels</h4>
+					<table>
+						<tr class="tablerow-alt-leftalign">
+							<th>Network</th>
+							<th>Orthogonal Ramp-Style Transition</th>
+							<th>Orthogonal On-Slope Transition</th>
+							<th>Diagonal Ramp-Style Transition</th>
+							<th>Diagonal On-Slope Transition</th>
+						</tr>
+						<tr>
+							<th>HSR</th>
+							<td class="table-yes">Yes, to GHSR (GHSR Button)</td>
+							<td class="table-yes">Yes, to GHSR (GHSR Button)</td>
+							<td class="table-no">No</td>
+							<td class="table-no">No</td>
+						</tr>
+						<tr class="tablerow-alt">
+							<th>GHSR</th>
+							<td class="table-no">Yes, to HSR (GHSR Button)</td>
+							<td class="table-no">Yes, to HSR (GHSR Button)</td>
+							<td class="table-no">No</td>
+							<td class="table-no">No</td>
+						</tr>
+					</table>
+					
+				<h4 class="leftheading">Tunnels</h4>
+					<table>
+						<tr class="tablerow-alt-leftalign">
+							<th>Network</th>
+							<th>Tunnel Support</th>
+						</tr>
+						<tr>
+							<th>HSR</th>
+							<td class="table-no">No</td>
+						</tr>
+						<tr class="tablerow-alt">
+							<th>GHSR</th>
+							<td class="table-no">No</td>
+						</tr>
+					</table>
+
+			
+			</div>
+			
+			<div class="bannerfull"><a name="stations"></a><h4>&nbsp;Stations</h4></div>
+			<div class="regtext">
+				<p>The NAM includes several stations for the HSR family of override networks, all of are Transit-Enabled Lots.  In order to enable network passage through the network, simply drag the Monorail network through
+				the station in the appropriate direction.  All of these stations can be found under the Rails Menu.</p>
+				
+				<ol>
+					<li>HSR Transit Hub by 3ddz</li>
+					<li>Overhanging HSR Station by Xyloxadoria</li>
+					<li>Ground High Speed Rail Station by Xyloxadoria</li>
+					<li>High Speed Rail Station by Xyloxadoria</li>
+					<li>High Speed Rail Station - Straight by morifari</li>
+					<li>High Speed Rail Station - Diagonal by Xyloxadoria</li>
+				</ol>
+				
+				<a href="images/hsr-stations.jpg"><img class="screencenter" src="images/hsr-stations.jpg" alt="HSR Stations"></a>
+			</div>
+			
+			<div class="bannerfull"><a name="menu"></a><h4>&nbsp;List of Menu Items</h4></div>
+			<div class="regtext">
+				
+				<h5 class="leftheading"><img src="images/ghsr-button.jpg" alt="GHSR Button">GHSR Pieces (located under the Rails Menu)</h5>
+				<p>This button includes the base starter piece for the Ground High Speed Rail override network, plus various puzzle piece-based crossings.</p>
+				<ol>
+					<li>Ground High Speed Rail Starter Piece</li>
+					<li>Orth/Diag L2 Road Viaduct x Orth GHSR</li>
+					<li>Orth/Diag L2 One-Way Road Viaduct x Orth GHSR</li>
+					<li>Orth/Diag L2 Rail Viaduct x Orth GHSR</li>
+					<li>Orth L2 Avenue Viaduct x Orth GHSR</li>
+					<li>Orth L2 Elevated Maxis Highway x Orth GHSR</li>
+					<li>Orth Elevated Rail x Orth GHSR</li>
+					<li>Orth High Elevated Rail x Orth GHSR</li>
+					<li>Orth Monorail x Orth GHSR</li>
+					<li>Orth High Monorail x Orth GHSR</li>
+					<li>Orth HSR x Orth GHSR</li>
+					<li>GHSR S-Curve</li>
+					<li>GHSR-to-HSR Transition Ramp</li>
+					<li>GHSR-to-HSR On-Slope Transition with HSR Starter</li>
+					<li>GHSR-to-HSR On-Slope Transition without HSR Starter</li>
+					<li>Underground Routes (FLUPs) under Orth HSR (various configurations)</li>
+					<li>Ortho URail under Orth/Diag HSR</li>
+					<li>Diag URail under Orth/Diag HSR</li>
+				</ol>
+				
+				<h5 class="leftheading"><img src="images/hsr-button.jpg" alt="HSR Button">HSR Pieces (located under the Rails Menu)</h5>
+				<p>This button includes the base starter piece for the (elevated) High Speed Rail override network, plus various puzzle piece-based crossings.</p>
+				<ol>
+					<li>High Speed Rail Starter Piece</li>
+					<li>High Speed Rail Filler Piece Orthogonal/Diagonal</li>
+					<li>Orth HSR x Orth SAM Set 2 Crossing</li>
+					<li>Orth HSR x Orth SAM Set 3 Crossing</li>
+					<li>Orth HSR x Orth SAM Set 4 Crossing</li>
+					<li>Orth HSR x Orth SAM Set 5 Crossing</li>
+					<li>Orth HSR x Orth SAM Set 7 Crossing</li>
+					<li>Orth HSR x Orth SAM Set 8 Crossing</li>
+					<li>Orth HSR x Orth SAM Set 9 Crossing</li>
+					<li>Orth HSR x Orth High El-Rail Crossing</li>
+					<li>Orth HSR x Orth High Monorail Crossing</li>
+					<li>Diag HSR x Orth Street</li>
+					<li>Diag HSR x Orth Road</li>
+					<li>Diag HSR x Orth One-Way Road</li>
+					<li>Diag HSR x Orth Rail</li>
+					<li>Diag HSR x Orth Avenue</li>
+					<li>Diag HSR x Diag Street</li>
+					<li>Diag HSR x Diag Road</li>
+					<li>Diag HSR x Diag One-Way Road</li>
+					<li>Diag HSR x Diag Rail</li>
+					<li>Diag HSR x Diag Avenue</li>
+					<li>Orth underground route (FLUPs) under Orth HSR No Pillar/Pillar</li>
+					<li>Orth Perpendicular URail under Perpendicular Orth HSR</li>
+					<li>Orth Perpendicular URail under Diag HSR</li>
+					<li>Diag URail under Orth HSR</li>
+					<li>Diag URail under Diag HSR</li>
+				</ol>
+			
+			</div>
+
+			<div class="bannerfull"><a name="knownissues"></a><h4>&nbsp;Known Issues</h4></div>
+			<div class="regtext">
+				<ul>
+					<li>Monorail automata will show up on HSR tracks by default, unless new automata are installed.</li>
+					<li>Placing under/overcrossings too close to curves will cause reversion to Monorail and other strange behavior.  This is due to the wider radii of the default HSR curves.</li>
+					<li>HSR Pieces button TAB Loop may not rotate fully back to starter pieces.  If this occurs, simply re-select the button.</li>
+				</ul>
+			</div>
+			
+			<div class="bannerfull"><a name="support-development"></a><h4>&nbsp;Information on Support and Development Updates</h4></div>
+			<div class="regtext">
+				<p>For technical support and information about the High Speed Rail Project in future releases, please check out the official <em>High Speed Rail Project (HSRP)</em>
+				thread on the forums at <a href="http://sc4devotion.com/forums/index.php?topic=2089.0">SimCity 4 Devotion</a>.</p>
+				
+				<p><em>NOTE: The High Speed Rail Project, in its current form, is no longer in active development.  Plans for future HSR-type functionality are still being determined as of NAM Version 36.</em></p>
+			</div>
+			
+			<div class="bannerfull"></h4></div>
+			
+			<div>
+				<p class="navigation">
+					<a href="../../1-start.html">Start</a>&nbsp;
+					<a href="../../2-installation.html">Installation</a>&nbsp;
+					<a href="../../3-basics.html">In-Game Basics</a>&nbsp;
+					<a href="../../4-content-overview.html">Content Overview</a>&nbsp;
+					<a href="../../5-faq.html">FAQs</a>&nbsp;
+					<a href="../../6-glossary.html">Glossary</a>&nbsp;
+					<a href="../../7-history.html">History</a>&nbsp;
+					<a href="../../8-technical.html">Tech Info</a>&nbsp;
+					<a href="../../9-credits.html">Credits</a>&nbsp;
+					<a href="../quicklink.html">Feature Guides</a>
+				</p>
+			</div>
+			
+			<div class="footer"><p>&nbsp;©2017 NAM Team</p></div>
+		</div>
+	</body>
+</html>

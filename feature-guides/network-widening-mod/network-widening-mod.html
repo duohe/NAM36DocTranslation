@@ -1,0 +1,932 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+		<title>Network Addon Mod - Network Widening Mod (NWM) Feature Guide</title>
+		<link rel="stylesheet" type="text/css" href="../../namdoc.css">
+	</head>
+
+	<body>
+		<div class="main">
+			<div class="logobanner"><img src="../../images/readmebanner.png" alt="readmebanner"></div>
+			
+			<div>
+				<p class="navigation">
+					<a href="../../1-start.html">Start</a>&nbsp;
+					<a href="../../2-installation.html">Installation</a>&nbsp;
+					<a href="../../3-basics.html">In-Game Basics</a>&nbsp;
+					<a href="../../4-content-overview.html">Content Overview</a>&nbsp;
+					<a href="../../5-faq.html">FAQs</a>&nbsp;
+					<a href="../../6-glossary.html">Glossary</a>&nbsp;
+					<a href="../../7-history.html">History</a>&nbsp;
+					<a href="../../8-technical.html">Tech Info</a>&nbsp;
+					<a href="../../9-credits.html">Credits</a>&nbsp;
+					<a href="../quicklink.html">Feature Guides</a>
+				</p>
+			</div>
+			
+			<div class="bannerfull"><h4>&nbsp;Network Widening Mod Features</h4></div>
+			
+			<div class="regtext">
+				<p>The Network Widening Mod adds 13 new override networks, which extend the game's base Road and One-Way Road networks by providing different width variants, many with higher capacities.  This includes 6 single-tile, 
+				5 dual-tile, and 2 triple-tile override networks.  Among these networks are the Turning Lane Avenues (TLA), which feature a center turn lane/flush median, multi-lane variants of the Road network, and four additional 
+				widths of the One-Way Road (OWR) network. It also includes some degree of diagonal functionality for all networks, transitions to connect NWM networks to Maxis networks or other NAM override networks, 
+				a series of Wide-Radius Curve pieces for three of the single-tile networks, and neighbor connector puzzle pieces for selected networks.</p>
+			</div>
+			
+			<span><img class="screenshot" src="images/nwmteaser1.jpg" alt="nwmteaser1">&nbsp;<img class="screenshot" src="images/nwmteaser2.jpg" alt="nwmteaser2"></span>
+			<span><img class="screenshot" src="images/nwmteaser3.jpg" alt="nwmteaser3">&nbsp;<img class="screenshot" src="images/nwmteaser4.jpg" alt="nwmteaser4"></span>
+			
+			<div class="bannerfull"><h4>&nbsp;Table of Contents</h4></div>
+			<div class="regtext">
+				<ul class="paddedlist">
+					<li><a href="#installation">Installing the NWM from the NAM Installer</a></li>
+					<li><a href="#networks">NWM Override Networks</a></li>
+					<li><a href="#diagonals">Constructing Diagonals and Base Curves</a></li>
+					<li><a href="#intersections">Building Intersections</a></li>
+					<li><a href="#transition">Transitioning to Other Networks</a></li>
+					<li><a href="#capacities">Capacities and Speeds</a></li>
+					<li><a href="#capabilities">Network Capabilities</a></li>
+					<li><a href="#menu">List of Menu Items</a></li>
+					<li><a href="#neighbor">A Note Regarding Neighbor Connections</a></li>
+					<li><a href="#turnlanes">Turn Lanes and NWM Networks</a></li>
+					<li><a href="#knownissues">Known Issues</a></li>
+					<li><a href="#support-development">Information on Support and Development Updates</a></li>
+				</ul>
+			</div>
+			
+			<div class="bannerfull"><a name="installation"></a><h4>&nbsp;Installing the NWM from the NAM Installer</h4></div>
+			<div class="regtext">
+			<p>The NWM is one of the features included by default if one selects the "Complete Standard Installation" or "Networks and Traffic Simulator" options in the NAM Installer.  In Custom Installation, there is a whole
+			section dedicated to the NWM and related optional features.</p>
+			<p>In Custom Installation, selecting the "Network Widening Mod" box will install the mod.</p>
+			
+			<img class="screenshot" src="images/nwm-installer1.jpg" alt="NWM in NAM Installer"</img>
+			
+			<p>By clicking the "+" to expand the menu further, one can select which NWM networks they wish to have installed (due to shared components, the triple-tile networks must be installed together).  The <strong>Legacy Puzzle Wealthification</strong> option adds wealth-dependent grass/sidewalk textures to many of the
+			older NWM Transition Puzzle Pieces.  Note, however, that this option may not work with all graphics cards, due to Z-fighting settings, and the introduction of draggable transitions (first seen in NAM 30/NWM 2.0), which
+			provide much better support for grass/sidewalks render most (but not all) of the old puzzle pieces obsolete.</p> 
+			
+			<img class="screenshot" src="images/nwm-installer2.jpg" alt="NWM in NAM Installer Expanded"</img>
+			
+			</div>
+
+			<div class="bannerfull"><a name="networks"></a><h4>&nbsp;NWM Override Networks</h4></div>
+			<div class="regtext">
+				<h4 class="leftheading">&nbsp;Overview</h4>
+				<p>The Network Widening Mod (NWM) plugin includes a total of 13 different override networks, which can be grouped into four classes: <strong>Roads (RD)</strong>, <strong>One-Way Roads (OWR)</strong>, 
+				<strong>[Road-based] Avenues (AVE)</strong>, and <strong>[Road-based] Turning Lane Avenues (TLA)</strong>.</p>
+				
+				<p>All of these override networks can either be constructed by first placing a
+				Starter Piece, then dragging the appropriate default network through the starter, at which point the draggable network should convert to match the starter.  This process is shown below on a Road-based
+				NWM Override Network.</p>
+				
+				<p><em>(Click for full resolution)</em></p>
+				<a href="images/tla3-starter-steps.jpg"><img class="screencenter" src="images/tla3-starter-steps.jpg" alt="Single-Tile NWM Starter"></a>
+				
+				<p>In the case of multi-tile override networks, they are still based off default single-tile networks, mainly due to limitations with the game's default dual-tile networks, and lack of triple-tile networks.
+				Simply use the same process for each tile in the starter to complete the network.</p>
+				
+				<p><em>(Click for full resolution)</em></p>
+				<a href="images/tla5-starter-steps.jpg"><img class="screencenter" src="images/tla5-starter-steps.jpg" alt="Multi-Tile NWM Starter"></a>
+				
+				<h5 class="leftheading">&nbsp;Turning Lane Avenues (TLA) [Road-based]</h5>
+				<p>The Turning Lane Avenues, or TLAs, are Road-based override networks that include a paved/flush center turn lane running down the median, as is especially common in North America.  In the case of the 
+				multi-tile variants, the existence of this center turn lane allows for vehicles to directly access buildings and lots on the far side of the network--something which the game's default Avenue 
+				network does not allow.</p>
+				<p>There are three total TLA networks presently included in the NWM (note that the center turn lane <em>is</em> included in the lane count associated with each network).</p>
+				<span class="leftcolumn">
+					<ul>
+						<li>3-Lane Turning Lane Avenue (TLA-3) [Single Tile]</li>
+						<li>5-Lane Turning Lane Avenue (TLA-5) [Dual Tile]</li>
+						<li>7-Lane Turning Lane Avenue (TLA-7) [Triple Tile]</li>
+					</ul>
+				</span>
+				
+				<span class="rightcolumn">
+					<img class="screenleft" src="images/nwm-tla-networks.jpg" alt="TLA Networks">
+				</span>
+				
+				<h5 class="leftheading">&nbsp;Avenues (AVE) [Road-based]</h5>
+				<p>The Avenues, or AVEs, are Road-based (not Avenue-based) override networks that include a landscaped median divider, much like the game's default 4-lane Avenue network.  Unlike the TLAs, the AVEs
+				do not allow direct access to buildings and lots on the far side of the network.</p>
+				
+				<span class="leftcolumn">			
+					<ul>
+						<li>2-Lane Avenue (AVE-2) [Single Tile]</li>
+						<li>6-Lane Avenue (AVE-6) [Triple Tile]</li>
+					</ul>
+				</span>
+				
+				<span class="rightcolumn">
+					<img class="screenleft" src="images/nwm-ave-networks.jpg" alt="AVE Networks">
+				</span>
+				
+				<h5 class="leftheading">&nbsp;Roads (RD) [Road-based]</h5>
+				<p>The Roads, or RDs, are Road-based override networks that do not feature a median, similar to the game's default Road network in appearance, but with more lanes.  Unlike the TLAs, the RDs
+				do not allow direct access to buildings and lots on the far side of the network.</p>
+
+				<span class="leftcolumn">				
+					<ul>
+						<li>3-Lane Asymmetrical Road (ARD-3) [Single Tile]</li>
+						<li>4-Lane Narrow Road (NRD-4) [Single Tile]</li>
+						<li>4-Lane Road (RD-4) [Dual Tile]</li>
+						<li>6-Lane Road (RD-6) [Dual Tile]</li>
+					</ul>
+				</span>
+				
+				<span class="rightcolumn">
+					<img class="screenleft" src="images/nwm-rd-networks.jpg" alt="RD Networks">
+				</span>
+				
+				<h5 class="leftheading">&nbsp;One-Way Roads (OWR) [One-Way Road-based]</h5>
+				<p>The One-Way Roads, or OWRs, are One-Way Road-based override networks that, in contrast to the other networks in the NWM, only allow traffic in a single direction, but feature differing
+				numbers of lanes compared to the game's default 2-lane One-Way Road setup.  Similar to the default One-Way Road network, directionality of each NWM OWR network is determined by draw direction, 
+				and these width variants can have their direction reversed in the same way.  Due to the presence of crossover paths on the multi-tile variants, it is
+				possible for vehicles to reach buildings and lots on the far side of the network.</p>
+
+				<span class="leftcolumn">				
+					<ul>
+						<li>1-Lane One-Way Road (OWR-1) [Single Tile]</li>
+						<li>3-Lane One-Way Road (OWR-3) [Single Tile]</li>
+						<li>4-Lane One-Way Road (OWR-4) [Dual Tile]</li>
+						<li>5-Lane One-Way Road (OWR-5) [Dual Tile]</li>
+					</ul>
+				</span>
+				
+				<span class="rightcolumn">
+					<img class="screenleft" src="images/nwm-owr-networks.jpg" alt="OWR Networks">
+				</span>
+				
+				<h4 class="leftheading"><a name="diagonals"></a>&nbsp;Constructing Diagonals and Curves</h4>
+					<p>The diagonal functionality for the single-tile NWM networks is straightforward (and diagonal starters are provided for all single-tile networks, except the NRD-4), but dual and triple-tile 
+					NWM networks may prove to be less intuitive at first, as there are different construction methods used, depending on the network.</p>
+					<p>The RD-4 and OWR-4 operate on a "shared-tile" setup.  Here is how the base layout (without the overrides) 
+					looks for a shared-tile setup:</p>
+					
+					<img class="screenshot" src="images/diag1.jpg" alt="diag1">
+					
+					<p>The TLA-5, OWR-5 and RD-6 operate on a "split tile" setup.  here is how the base layout (without the overrides) looks for a split-tile setup:</p>
+					
+					<img class="screenshot" src="images/diag2.jpg" alt="diag2">
+					
+					<p>The TLA-7 and AVE-6 operate on a slightly larger "split tile setup":</p>
+					
+					<img class="screenshot" src="images/diag3.jpg" alt="diag3">
+					
+				<div class="bannerfull"><a name="transition"></a><h4>&nbsp;Transitioning to Other Networks</h4></div>
+				<div class="regtext">
+					<p>There are three methods by which one can create a transition between an NWM network and another network: the <strong>Draggable Stub Method</strong>, the draggable <strong>Direct Connection Method</strong>, and
+					the use of <strong>Puzzle Pieces</strong>.  Note that, except in the case of setups not otherwise covered, the Puzzle Piece method is largely considered deprecated/outdated, due to its
+					lack of support for wealth-level textures.</p>
+					
+					<h5 class="leftheading">Draggable Stub Method</h5>
+					<p>The Draggable Stub Method is used to transition between an override network and its base network (i.e. from ARD-3 to Road) or between two override networks sharing the same base network (i.e. from
+					RD-4 to RD-6).  In order to create transitions that use this method, simply drag each network such that the end stubs of each network are right next to one another, as seen below on the left.  Provided the combination
+					of networks is one that is supported, the stubs will convert into a transition between the networks, as seen on the right.  This method will also work for networks of different tile widths (i.e. TLA-3 to TLA-5)</p>
+					
+					<img class="screencenter" src="images/dragtrans1.jpg" alt="Draggable Stub Method">
+					
+					<h5 class="leftheading">Direct Connection Method</h5>
+					<p>The Direct Connection Method is generally used to transition between an override network and a network (default or override) built from a different base (i.e. from TLA-5 to Avenue, or from TLA-3 to RHW-2).  In order to 
+					create transitions that use this method, simply drag one network into the other, similar to the fashion shown below.  Provided the combination
+					of networks is one that is supported, the direct connection will convert into a transition between the networks, as seen on the right.</p>
+					
+					<img class="screencenter" src="images/dragtrans2.jpg" alt="Direct Connection Method">
+					
+					<h5 class="leftheading">Puzzle Piece Method</h5>
+					<p>The Puzzle Piece Method entails using the items found under the NWM Transition Puzzle Pieces button.  To create a transition, simply find the desired puzzle piece from the menu, aligning the preview
+					to where one wishes to place it, and clicking to plop the piece.  Note that some of the puzzle-based transitions do not have NWM Starters on their ends, and the base network setup must be built <strong><em>before
+					plopping the puzzle piece</em></strong>.</p>  
+					<p><strong>Note</strong>: With the exception of some setups that are not supported any other way, the Puzzle Piece Method is deprecated/outdated.  
+					All future additions to the repertoire of NWM transitions will be in draggable form, using either the Draggable Stub or Direct Connection Methods, as appropriate.  Draggable treatments for all of the existing 
+					puzzle pieces are planned for a future NAM release.</p>
+					
+					<p>A full listing of supported draggable transitions can be found in the <a href="#capabilities">Network Capabilities</a> section.  A listing of the existing transition puzzle pieces can be found in the 
+					<a href="#menu">Menu Items section.</p>
+				</div>
+
+								
+				<div class="bannerfull"><a name="capacity"></a><h4>&nbsp;Capacities and Speeds</h4></div>
+				<div class="regtext">
+				</div>
+				<p>The capacity of each network depends on the <a href="../traffic-sim/traffic-sim.html">Traffic Plugin</a> one has installed. Capacity is generally calculated on a per tile basis by the game.  
+				All NWM networks are also surface street-type networks, meaning that they allow full access to RCI Zones. The capacities for the five standard capacity levels of the NAM Traffic Plugin are listed below.  
+				Please note that these capacities listed are for the <em>full width</em> of the network, rather than the per-tile capacity.</p>  
+				<p>With the exception of the OWR-1 and RD-4 networks, which share the same capacity as their respective base networks, all other NWM networks have a capacity that is 125% of that of the base network used 
+				in the override network setup, as a result of using a special pathing setup that allows a one-time capacity boost of 25%.  This is why the NRD-4, despite having an additional lane, has the same capacity 
+				as the other boosted single-tile networks, as well as why the OWR-1 has the same capacity as the base One-Way Road.  Since crossover paths on multi-tile override networks trigger the boost,
+				the OWR-5 has the same capacity as the OWR-4, though the use of a split tile diagonals on the OWR-5 will give it a higher diagonal capacity than the OWR-4 and its shared tile diagonals.</p>
+					<table class="regtext">
+						 <tr class="toprow">
+							<th width="150">NWM Network Type</th>
+							<th width="70">Tile Width</th>
+							<th width="100">Classic</th>
+							<th width="100">Low</th>
+							<th width="100">Medium</th>
+							<th width="100">High</th>
+							<th width="100">Ultra</th>
+						</tr>
+						<tr>
+							<th>TLA-3</th>
+							<th>1</th>
+							<td>1500</td>
+							<td>3000</td>
+							<td>5000</td>
+							<td>7500</td>
+							<td>15000</td>
+						</tr>
+						<tr class="tablerow-alt">
+							<th>AVE-2</th>
+							<th>1</th>
+							<td>1500</td>
+							<td>3000</td>
+							<td>5000</td>
+							<td>7500</td>
+							<td>15000</td>
+						</tr>
+						<tr>
+							<th>ARD-3</th>
+							<th>1</th>
+							<td>1500</td>
+							<td>3000</td>
+							<td>5000</td>
+							<td>7500</td>
+							<td>15000</td>
+						</tr>
+						<tr class="tablerow-alt">
+							<th>OWR-1</th>
+							<th>1</th>
+							<td>1800</td>
+							<td>2400</td>
+							<td>4000</td>
+							<td>6000</td>
+							<td>18000</td>
+						</tr>
+						<tr>
+							<th>OWR-3</th>
+							<th>1</th>
+							<td>2250</td>
+							<td>4500</td>
+							<td>7500</td>
+							<td>11250</td>
+							<td>22500</td>
+						</tr>
+						<tr class="tablerow-alt">
+							<th>NMAVE-4</th>
+							<th>1</th>
+							<td>1500</td>
+							<td>3000</td>
+							<td>5000</td>
+							<td>7500</td>
+							<td>15000</td>
+						</tr>
+						<tr>
+							<th>TLA-5</th>
+							<th>2</th>
+							<td>3000</td>
+							<td>6000</td>
+							<td>10000</td>
+							<td>15000</td>
+							<td>30000</td>
+						</tr>
+						<tr class="tablerow-alt">
+							<th>OWR-4</th>
+							<th>2</th>
+							<td>4500</td>
+							<td>9000</td>
+							<td>15000</td>
+							<td>22500</td>
+							<td>45000</td>
+						</tr>
+						<tr>
+							<th>OWR-5</th>
+							<th>2</th>
+							<td>4500</td>
+							<td>9000</td>
+							<td>15000</td>
+							<td>22500</td>
+							<td>45000</td>
+						</tr>
+						<tr class="tablerow-alt">
+							<th>RD-4</th>
+							<th>2</th>
+							<td>2400</td>
+							<td>4800</td>
+							<td>8000</td>
+							<td>12000</td>
+							<td>24000</td>
+						</tr>
+						<tr>
+							<th>RD-6</th>
+							<th>2</th>
+							<td>3000</td>
+							<td>6000</td>
+							<td>10000</td>
+							<td>15000</td>
+							<td>30000</td>
+						</tr>
+						<tr class="tablerow-alt">
+							<th>TLA-7</th>
+							<th>3</th>
+							<td>4500</td>
+							<td>9000</td>
+							<td>15000</td>
+							<td>22500</td>
+							<td>45000</td>
+						</tr>		
+						<tr>
+							<th>AVE-6</th>
+							<th>3</th>
+							<td>4500</td>
+							<td>9000</td>
+							<td>15000</td>
+							<td>22500</td>
+							<td>45000</td>
+						</tr>
+					</table>
+					
+				<p>With respect to speeds, these networks will have the same catalog speed as their default counterparts.</p>
+				<table>
+							<tr class="toprow"><td>Vehicle Type</td><td>Road</td><td>One-Way Road</td></tr>
+							<tr><td>Car</td><td>50</td><td>75</td></tr>
+							<tr class="tablerow-alt"><td>Bus</td><td>45</td><td>65</td></tr>
+							<tr><td>Freight Truck</td><td>45</td><td>60</td></tr>
+							<tr class="tablerow-alt"><td>Pedestrian</td><td>15</td><td>15</td></tr>
+				</table>
+				
+				<p>Note, however, that these catalog speeds are for 100% of catalog capacity, and that speeds on empty networks will exceed these figures by 30%, declining as the networks 
+				increase in volume per the Congestion vs. Speed Curve.  Since many of the NWM networks have a boosted capacity, they will not reach the 100% figure as quickly, thereby allowing
+				for higher speeds at higher volumes.</p>
+			</div>
+				
+			<div class="bannerfull"><a name="capabilities"></a><h4>&nbsp;Network Capabilities</h4></div>
+			<div class="regtext">		
+				<h4 class="leftheading"></a>&nbsp;Capabilities of Each Network</h4>
+					<h5 class="leftheading">KEY</h5>
+					<table>
+						<tr>
+							<td class="table-yes">Full Support</td><td class="tablerow-alt">This particular feature can be constructed, with minimal (if any) limitations.  Note that things like T-intersections
+							may be limited within reason, based on the number of lanes on each network--see the T-End Min and T-End Max chart for further details.</td>
+						</tr>
+						<tr>
+							<td class="table-partial">Partial Support</td><td class="tablerow-alt">This particular feature can be constructed, but not in all instances.  Details will be given as to what is/is not possible.
+							Partial support may be for intentional design reasons (such as realism or general unfeasibility), or simply because the feature has not been fully developed.</td>
+						</tr>
+						<tr>
+							<td class="table-limited">Limited Support</td><td class="tablerow-alt">This particular feature can be constructed, but only in extremely limited circumstances.  Instances that are possible may be listed,
+							insofar as it is possible.  Use at your own risk.</td>
+						</tr>
+						<tr>
+							<td class="table-no">No Support</td><td class="tablerow-alt">This particular feature cannot be constructed.  This restriction could be for intentional design reasons (such as realism, 
+							or general unfeasibility), or simply because it has not yet been developed.</td>
+						</tr>
+					</table>
+					<h5 class="leftheading">ADDITIONAL NOTES</h5>
+						<p><strong>T-End Min</strong>: If the given network is to end at a T-intersection, this value is the minimum number of total lanes that needs to be on the cross network.  For instance, while
+						an RD-6 (T-End Min = 3) can end at an ARD-3 (3 total thru lanes), it cannot end at a Road (2 total thru lanes).  Center lanes on TLA networks do not count toward the overall figure
+						(i.e. the TLA-5 would be considered to have 4 lanes total in this instance).</p>
+						<p><strong>T-In Max</strong>: If a cross network ends at the given network in a T-intersection, this value is the maximum number of lanes on the cross network heading inbound to the
+						T-intersection (half the network, in the case of a two-way network, the full network if one-way).  For instance, an AVE-2 can have an Avenue or RD-4 end at it (AVE-2 T-In Max = 2, while
+						the Avenue and RD-4 have 4 lanes total, 2 heading inbound to the intersection), but an OWR-1 cannot (T-In Max = 1).  Center lanes on TLA networks do not count toward the overall figure
+						(i.e. the TLA-5 would be considered to have 4 lanes total in this instance).</p>
+						<p><strong>OxO</strong>: OxO stands for "orthogonal x orthogonal", and refers to a situation where both networks are orthogonal (in a straight line) along the game's grid, intersecting perpendicularly 
+						(at 90° angles at all corners)</p>
+						<p><strong>OxD</strong>: OxD stands for "orthogonal x diagonal", and refers to a situation where the given network is orthogonal (in a straight line) along the game's grid, and the cross network is diagonal
+						(running at a 45° angle).</p>
+						<p><strong>DxO</strong>: DxO stands for "diagonal x orthogonal", and refers to a situation where the base network is diagonal (running at a 45° angle), and the cross network is orthogonal (in a straight line) 
+						along the game's grid.</p>
+						<p><strong>DxD</strong>: DxD stands for "diagonal x diagonal", and refers to a situation where both networks are diagonal (running at a 45° angle) along the game's grid, intersecting perpendicularly 
+						(at 90° angles at all corners)</p>
+						<p><strong>Stub</strong>: Indication that the transition can be built using the Draggable Stub Method.</p>
+						<p><strong>Dir</strong>: Indication that the transition can be built using the Direct Connection Method.</p>
+						<p><strong>PP</strong>: Indication that the feature can only be built through the use of a static Puzzle Piece.</p>
+
+
+					
+					<h4 class="leftheading">Base Draggable Network Features</h4>
+					<table>
+						<tr class="tablerow-alt">
+							<th>Network</th><th>Base Orthogonals</th><th>Base Diagonals</th><th>Ortho 90° Bend</th><th>Ortho S-Curve</th><th>Diag 90° "Boomerang" Bend</th><th>Diag S-Curve</th>
+						</tr>
+						<tr>
+							<th>TLA-3</th><td class="table-yes">Yes</td><td class="table-yes">Yes (Single Tile)</td><td class="table-yes">Yes</td><td class="table-yes">Yes</td><td class="table-yes">Yes</td><td class="table-yes">Yes</td>
+						</tr>
+						<tr class="tablerow-alt">
+							<th>AVE-2</th><td class="table-yes">Yes</td><td class="table-yes">Yes (Single Tile)</td><td class="table-yes">Yes</td><td class="table-yes">Yes</td><td class="table-yes">Yes</td><td class="table-yes">Yes</td>
+						</tr>
+						<tr>
+							<th>ARD-3</th><td class="table-yes">Yes</td><td class="table-yes">Yes (Single Tile)</td><td class="table-yes">Yes</td><td class="table-yes">Yes</td><td class="table-yes">Yes</td><td class="table-yes">Yes</td>
+						</tr>
+						<tr class="tablerow-alt">
+							<th>NRD-4</th><td class="table-yes">Yes</td><td class="table-yes">Yes (Single Tile)</td><td class="table-yes">Yes</td><td class="table-yes">Yes</td><td class="table-yes">Yes</td><td class="table-yes">Yes</td>
+						</tr>
+						<tr>
+							<th>OWR-1</th><td class="table-yes">Yes</td><td class="table-yes">Yes (Single Tile)</td><td class="table-yes">Yes</td><td class="table-yes">Yes</td><td class="table-yes">Yes</td><td class="table-yes">Yes</td>
+						</tr>
+						<tr class="tablerow-alt">
+							<th>OWR-3</th><td class="table-yes">Yes</td><td class="table-yes">Yes (Single Tile)</td><td class="table-yes">Yes</td><td class="table-yes">Yes</td><td class="table-yes">Yes</td><td class="table-yes">Yes</td>
+						</tr>
+						<tr>
+							<th>TLA-5</th><td class="table-yes">Yes</td><td class="table-yes">Yes (Split Tile)</td><td class="table-yes">Yes</td><td class="table-yes">Yes</td><td class="table-no">No</td><td class="table-no">No</td>
+						</tr>
+						<tr class="tablerow-alt">
+							<th>RD-4</th><td class="table-yes">Yes</td><td class="table-yes">Yes (Shared Tile)</td><td class="table-yes">Yes</td><td class="table-yes">Yes</td><td class="table-no">No</td><td class="table-no">No</td>
+						</tr>
+						<tr>
+							<th>RD-6</th><td class="table-yes">Yes</td><td class="table-yes">Yes (Split Tile)</td><td class="table-no">No</td><td class="table-yes">Yes</td><td class="table-no">No</td><td class="table-no">No</td>
+						</tr>
+						<tr class="tablerow-alt">
+							<th>OWR-4</th><td class="table-yes">Yes</td><td class="table-yes">Yes (Shared Tile)</td><td class="table-no">No</td><td class="table-yes">Yes</td><td class="table-no">No</td><td class="table-no">No</td>
+						</tr>
+						<tr>
+							<th>OWR-5</th><td class="table-yes">Yes</td><td class="table-yes">Yes (Split Tile)</td><td class="table-no">No</td><td class="table-yes">Yes</td><td class="table-no">No</td><td class="table-no">No</td>
+						</tr>
+						<tr class="tablerow-alt">
+							<th>TLA-7</th><td class="table-yes">Yes</td><td class="table-yes">Yes (Split Tile)</td><td class="table-no">No</td><td class="table-no">No</td><td class="table-no">No</td><td class="table-no">No</td>
+						</tr>
+						<tr>
+							<th>AVE-6</th><td class="table-yes">Yes</td><td class="table-yes">Yes (Split Tile)</td><td class="table-no">No</td><td class="table-no">No</td><td class="table-no">No</td><td class="table-no">No</td>
+						</tr>
+					</table>
+					<br>
+					
+					<h4 class="leftheading">Intersections/Crossings</h4>
+					<table>
+						<tr class="tablerow-alt-leftalign">
+							<th>Network</th><th>T-End Min</th><th>T-In Max</th><th>OxO Maxis Networks</th><th>OxO NWM</th><th>OxO GLR/Tram</th><th>OxO STR</th><th>OxO Draggable Viaducts</th><th>OxO L0 RHW</th><th>OxO L1-L4/DD RHW</th><th>OxO HSR</th><th>OxO Dual-Networking</th><th>OxO SAM</th><th>FLUPs</th><th>URail</th>
+						</tr>
+						<tr class="leftalign">
+							<th>TLA-3</th><td>1</td><td>2</td><td class="table-yes">Yes</td><td class="table-yes">Yes</td><td class="table-partial">Urban/Rural Only</td><td class="table-yes">Yes</td><td class="table-yes">Yes</td><td class="table-partial">RHW-2 and MIS Only</td><td class="table-yes">Yes</td><td class="table-yes">Yes</td><td class="table-no">No</td><td class="table-no">No</td><td class="table-no">No</td><td class="table-no">No</td>
+						</tr>
+						<tr class="tablerow-alt-leftalign">
+							<th>AVE-2</th><td>1</td><td>2</td><td class="table-yes">Yes</td><td class="table-yes">Yes</td><td class="table-partial">Urban/Rural Only</td><td class="table-yes">Yes</td><td class="table-yes">Yes</td><td class="table-partial">RHW-2 and MIS Only</td><td class="table-yes">Yes</td><td class="table-yes">Yes</td><td class="table-no">No</td><td class="table-no">No</td><td class="table-no">No</td><td class="table-no">No</td>
+						</tr>
+						<tr class="leftalign">
+							<th>ARD-3</th><td>2</td><td>3</td><td class="table-yes">Yes</td><td class="table-yes">Yes</td><td class="table-partial">Urban/Rural Only</td><td class="table-yes">Yes</td><td class="table-yes">Yes</td><td class="table-partial">RHW-2 and MIS Only</td><td class="table-yes">Yes</td><td class="table-yes">Yes</td><td class="table-no">No</td><td class="table-no">No</td><td class="table-no">No</td><td class="table-no">No</td>
+						</tr>
+						<tr class="tablerow-alt-leftalign">
+							<th>NRD-4</th><td>2</td><td>4</td><td class="table-yes">Yes</td><td class="table-yes">Yes</td><td class="table-partial">Urban/Rural Only</td><td class="table-yes">Yes</td><td class="table-yes">Yes</td><td class="table-partial">RHW-2 and MIS Only</td><td class="table-yes">Yes</td><td class="table-yes">Yes</td><td class="table-no">No</td><td class="table-no">No</td><td class="table-no">No</td><td class="table-no">No</td>
+						</tr>
+						<tr class="leftalign">
+							<th>OWR-1</th><td>1</td><td>1</td><td class="table-yes">Yes</td><td class="table-yes">Yes</td><td class="table-partial">Urban/Rural Only</td><td class="table-yes">Yes</td><td class="table-yes">Yes</td><td class="table-partial">RHW-2 and MIS Only</td><td class="table-yes">Yes</td><td class="table-yes">Yes</td><td class="table-no">No</td><td class="table-no">No</td><td class="table-no">No</td><td class="table-no">No</td>
+						</tr>
+						<tr class="tablerow-alt-leftalign">
+							<th>OWR-3</th><td>3</td><td>3</td><td class="table-yes">Yes</td><td class="table-yes">Yes</td><td class="table-partial">Urban/Rural Only</td><td class="table-yes">Yes</td><td class="table-yes">Yes</td><td class="table-partial">RHW-2 and MIS Only</td><td class="table-yes">Yes</td><td class="table-yes">Yes</td><td class="table-no">No</td><td class="table-no">No</td><td class="table-no">No</td><td class="table-no">No</td>
+						</tr>
+						<tr class="leftalign">
+							<th>TLA-5</th><td>2</td><td>4</td><td class="table-yes">Yes</td><td class="table-yes">Yes</td><td class="table-partial">Urban/Rural Only</td><td class="table-yes">Yes</td><td class="table-yes">Yes</td><td class="table-partial">RHW-2 and MIS Only</td><td class="table-yes">Yes</td><td class="table-yes">Yes</td><td class="table-no">No</td><td class="table-no">No</td><td class="table-no">No</td><td class="table-no">No</td>
+						</tr>
+						<tr class="tablerow-alt-leftalign">
+							<th>RD-4</th><td>2</td><td>4</td><td class="table-yes">Yes</td><td class="table-yes">Yes</td><td class="table-partial">Urban/Rural Only</td><td class="table-yes">Yes</td><td class="table-yes">Yes</td><td class="table-partial">RHW-2 and MIS Only</td><td class="table-yes">Yes</td><td class="table-yes">Yes</td><td class="table-no">No</td><td class="table-no">No</td><td class="table-no">No</td><td class="table-no">No</td>
+						</tr>
+						<tr class="leftalign">
+							<th>RD-6</th><td>3</td><td>6</td><td class="table-yes">Yes</td><td class="table-yes">Yes</td><td class="table-partial">Urban/Rural Only</td><td class="table-yes">Yes</td><td class="table-yes">Yes</td><td class="table-partial">RHW-2 and MIS Only</td><td class="table-yes">Yes</td><td class="table-yes">Yes</td><td class="table-no">No</td><td class="table-no">No</td><td class="table-no">No</td><td class="table-no">No</td>
+						</tr>
+						<tr class="tablerow-alt-leftalign">
+							<th>OWR-4</th><td>4</td><td>4</td><td class="table-yes">Yes</td><td class="table-yes">Yes</td><td class="table-partial">Urban/Rural Only</td><td class="table-yes">Yes</td><td class="table-yes">Yes</td><td class="table-partial">RHW-2 and MIS Only</td><td class="table-yes">Yes</td><td class="table-yes">Yes</td><td class="table-no">No</td><td class="table-no">No</td><td class="table-no">No</td><td class="table-no">No</td>
+						</tr>
+						<tr class="leftalign">
+							<th>OWR-5</th><td>5</td><td>5</td><td class="table-yes">Yes</td><td class="table-yes">Yes</td><td class="table-partial">Urban/Rural Only</td><td class="table-yes">Yes</td><td class="table-yes">Yes</td><td class="table-partial">RHW-2 and MIS Only</td><td class="table-yes">Yes</td><td class="table-yes">Yes</td><td class="table-no">No</td><td class="table-no">No</td><td class="table-no">No</td><td class="table-no">No</td>
+						</tr>
+						<tr class="tablerow-alt-leftalign">
+							<th>TLA-7</th><td>3</td><td>6</td><td class="table-yes">Yes</td><td class="table-yes">Yes</td><td class="table-partial">Urban/Rural Only</td><td class="table-yes">Yes</td><td class="table-yes">Yes</td><td class="table-partial">RHW-2 and MIS Only</td><td class="table-yes">Yes</td><td class="table-yes">Yes</td><td class="table-no">No</td><td class="table-no">No</td><td class="table-no">No</td><td class="table-no">No</td>
+						</tr>
+						<tr class="leftalign">
+							<th>AVE-6</th><td>3</td><td>6</td><td class="table-yes">Yes</td><td class="table-yes">Yes</td><td class="table-partial">Urban/Rural Only</td><td class="table-yes">Yes</td><td class="table-yes">Yes</td><td class="table-partial">RHW-2 and MIS Only</td><td class="table-yes">Yes</td><td class="table-yes">Yes</td><td class="table-no">No</td><td class="table-no">No</td><td class="table-no">No</td><td class="table-no">No</td>
+						</tr>
+
+					</table>
+					<br>
+					<br>
+					<table>
+						<tr class="tablerow-alt-leftalign">
+							<th>Network</th><th>OxD/DxO/DxD Maxis Networks</th><th>OxD/DxO/DxD NWM</th><th>OxD/DxO/DxD RHW</th><th>All Other OxD/DxO/DxD</th>
+						</tr>
+						<tr class="leftalign">
+							<th>TLA-3</th><td class="table-limited">Limited, as-is, +-intersections only (no T-ints)</td><td class="table-limited">Limited, as-is, only with single-tile NWM networks, +-intersections only (no T-ints)</td><td class="table-no">No (Not yet implemented)</td><td class="table-no">No (Not yet implemented)</td>
+						</tr>
+						<tr class="tablerow-alt-leftalign">
+							<th>AVE-2</th><td class="table-limited">Limited, as-is, +-intersections only (no T-ints)</td><td class="table-limited">Limited, as-is, only with single-tile NWM networks, +-intersections only (no T-ints)</td><td class="table-no">No (Not yet implemented)</td><td class="table-no">No (Not yet implemented)</td>
+						</tr>
+						<tr class="leftalign">
+							<th>ARD-3</th><td class="table-limited">Limited, as-is, +-intersections only (no T-ints)</td><td class="table-no">No (not yet implemented)</td><td class="table-no">No (Not yet implemented)</td><td class="table-no">No (Not yet implemented)</td>
+						</tr>
+						<tr class="tablerow-alt-leftalign">
+							<th>NRD-4</th><td class="table-no">No (not yet implemented)</td><td class="table-no">No (not yet implemented)</td><td class="table-no">No (Not yet implemented)</td><td class="table-no">No (Not yet implemented)</td>
+						</tr>
+						<tr class="leftalign">	
+							<th>OWR-1</th><td class="table-no">No (not yet implemented)</td><td class="table-no">No (not yet implemented)</td><td class="table-no">No (Not yet implemented)</td><td class="table-no">No (Not yet implemented)</td>
+						</tr>
+						<tr class="tablerow-alt-leftalign">	
+							<th>OWR-3</th><td class="table-limited">Limited, as-is, +-intersections only no T-ints)</td><td class="table-no">No (not yet implemented)</td><td class="table-no">No (Not yet implemented)</td><td class="table-no">No (Not yet implemented)</td>
+						</tr>
+						<tr class="leftalign">	
+							<th>All Multi-Tile Networks</th><td class="table-no">No (not yet implemented)</td><td class="table-no">No (not yet implemented)</td><td class="table-no">No (Not yet implemented)</td><td class="table-no">No (Not yet implemented)</td>
+						</tr>
+					</table>
+					<br>
+					<br>
+					
+					<table>
+						<tr class="tablerow-alt">
+							<th>Networks</th><th>Asymmetrical Intersections</th>
+						</tr>
+						<tr>
+							<th>All Networks</th><td class="table-no">No Support</td>
+						</tr>
+					</table>
+					<br>
+					
+					<h4 class="leftheading">Orthogonal Transitions</h4>
+					<table>
+						<tr class="tablerow-alt">
+							<th></th><th>Street</th><th>Road</th><th>One-Way Road</th><th>Avenue</th><th>Maxis Hwy</th><th>RHW</th><th>TLA-3</th><th>AVE-2</th><th>ARD-3</th><th>NRD-4</th><th>OWR-1</th><th>OWR-3</th><th>TLA-5</th><th>RD-4</th><th>RD-6</th><th>OWR-4</th><th>OWR-5</th><th>TLA-7</th><th>AVE-6</th>
+						</tr>
+						<tr>
+							<th>TLA-3</th><td class="table-no">No</td><td class="table-yes">Yes (Stub)</td><td class="table-no">No</td><td class="table-yes">Yes (Dir)</td><td class="table-no">No</td><td class="table-yes">RHW-2 (Dir)</td><td class="table-black">Self</td><td class="table-yes">Yes (Stub)</td><td class="table-yes">Yes (Stub)</td><td class="table-no">No</td><td class="table-no">No</td><td class="table-no">No</td><td class="table-yes">Yes (Stub)</td><td class="table-no">No</td><td class="table-no">No</td><td class="table-no">No</td><td class="table-no">No</td><td class="table-no">No</td><td class="table-no">No</td>
+						</tr>
+						<tr class="tablerow-alt">
+							<th>AVE-2</th><td class="table-no">No</td><td class="table-yes">Yes (Stub)</td><td class="table-no">No</td><td class="table-yes">Yes (Dir)</td><td class="table-no">No</td><td class="table-yes">RHW-2 (Dir)</td><td class="table-yes">Yes (Stub)</td><td class="table-black">Self</td><td class="table-yes">Yes (Stub)</td><td class="table-no">No</td><td class="table-no">No</td><td class="table-no">No</td><td class="table-yes">Yes (Stub)</td><td class="table-no">No</td><td class="table-no">No</td><td class="table-no">No</td><td class="table-no">No</td><td class="table-no">No</td><td class="table-no">No</td>
+						</tr>
+						<tr>
+							<th>ARD-3</th><td class="table-no">No</td><td class="table-yes">Yes (Stub)</td><td class="table-no">No</td><td class="table-yes">Yes (Dir)</td><td class="table-no">No</td><td class="table-yes">RHW-3 (Dir)</td><td class="table-yes">Yes (Stub)</td><td class="table-yes">Yes (Stub)</td><td class="table-black">Self</td><td class="table-yes">Yes (Stub)</td><td class="table-no">No</td><td class="table-no">No</td><td class="table-no">No</td><td class="table-no">No</td><td class="table-no">No</td><td class="table-no">No</td><td class="table-no">No</td><td class="table-no">No</td><td class="table-no">No</td>
+						</tr>
+						<tr class="tablerow-alt">
+							<th>NRD-4</th><td class="table-no">No</td><td class="table-yes">Yes (Stub)</td><td class="table-no">No</td><td class="table-yes">Yes (Dir)</td><td class="table-no">No</td><td class="table-no">No</td><td class="table-no">No</td><td class="table-no">No</td><td class="table-yes">Yes (Stub)</td><td class="table-black">Self</td><td class="table-no">No</td><td class="table-no">No</td><td class="table-yes">Yes (Stub)</td><td class="table-yes">Yes (Stub)</td><td class="table-no">No</td><td class="table-no">No</td><td class="table-no">No</td><td class="table-no">No</td><td class="table-no">No</td>
+						</tr>
+						<tr>
+							<th>OWR-1</th><td class="table-no">No</td><td class="table-no">No</td><td class="table-yes">Yes (Stub)</td><td class="table-no">No</td><td class="table-no">No</td><td class="table-yes">MIS (Dir)</td><td class="table-no">No</td><td class="table-no">No</td><td class="table-no">No</td><td class="table-no">No</td><td class="table-black">Self</td><td class="table-no">No</td><td class="table-no">No</td><td class="table-no">No</td><td class="table-no">No</td><td class="table-no">No</td><td class="table-no">No</td><td class="table-no">No</td><td class="table-no">No</td>
+						</tr>
+						<tr class="tablerow-alt">
+							<th>OWR-3</th><td class="table-no">No</td><td class="table-no">No</td><td class="table-yes">Yes (Stub)</td><td class="table-no">No</td><td class="table-no">No</td><td class="table-yes">RHW-6S (Dir)</td><td class="table-no">No</td><td class="table-no">No</td><td class="table-no">No</td><td class="table-no">No</td><td class="table-no">No</td><td class="table-black">Self</td><td class="table-no">No</td><td class="table-no">No</td><td class="table-yes">Yes-Dual (Dir)</td><td class="table-yes">Yes (Stub)</td><td class="table-partial">Yes (PP)</td><td class="table-yes">Yes-Dual (Dir)</td><td class="table-yes">Yes-Dual (Dir)</td>
+						</tr>
+						<tr>
+							<th>TLA-5</th><td class="table-no">No</td><td class="table-no">No</td><td class="table-yes">Yes (Dir)</td><td class="table-yes">Yes (Dir)</td><td class="table-no">No</td><td class="table-yes">RHW-4 (Dir)</td><td class="table-yes">Yes (Stub)</td><td class="table-yes">Yes (Stub)</td><td class="table-no">No</td><td class="table-yes">Yes (Stub)</td><td class="table-no">No</td><td class="table-no">No</td><td class="table-black">Self</td><td class="table-yes">Yes (Stub)</td><td class="table-yes">Yes (Stub)</td><td class="table-no">No</td><td class="table-no">No</td><td class="table-no">No</td><td class="table-no">No</td>
+						</tr>
+						<tr class="tablerow-alt">
+							<th>RD-4</th><td class="table-no">No</td><td class="table-yes">Yes (Stub)</td><td class="table-yes">Yes (Dir)</td><td class="table-yes">Yes (Dir)</td><td class="table-no">No</td><td class="table-yes">RHW-4 (Dir)</td><td class="table-no">No</td><td class="table-no">No</td><td class="table-no">No</td><td class="table-yes">Yes (Stub)</td><td class="table-no">No</td><td class="table-no">No</td><td class="table-yes">Yes (Stub)</td><td class="table-black">Self</td><td class="table-yes">Yes (Stub)</td><td class="table-no">No</td><td class="table-no">No</td><td class="table-no">No</td><td class="table-no">No</td>
+						</tr>
+						<tr>
+							<th>RD-6</th><td class="table-no">No</td><td class="table-no">No</td><td class="table-no">No</td><td class="table-yes">Yes (Dir)</td><td class="table-no">No</td><td class="table-yes">RHW-6S (Dir)</td><td class="table-no">No</td><td class="table-no">No</td><td class="table-no">No</td><td class="table-no">No</td><td class="table-no">No</td><td class="table-yes">Yes-Dual (Dir)</td><td class="table-yes">Yes (Stub)</td><td class="table-yes">Yes (Stub)</td><td class="table-black">Self</td><td class="table-no">No</td><td class="table-no">No</td><td class="table-partial">Yes (PP)</td><td class="table-partial">Yes (PP)</td>
+						</tr>
+						<tr class="tablerow-alt">
+							<th>OWR-4</th><td class="table-no">No</td><td class="table-no">No</td><td class="table-yes">Yes-Dual (Stub)</td><td class="table-no">No</td><td class="table-no">No</td><td class="table-yes">RHW-8S (Dir)</td><td class="table-no">No</td><td class="table-no">No</td><td class="table-no">No</td><td class="table-no">No</td><td class="table-no">No</td><td class="table-yes">Yes (Stub)</td><td class="table-no">No</td><td class="table-no">No</td><td class="table-no">No</td><td class="table-black">Self</td><td class="table-yes">Yes (Stub)</td><td class="table-no">No</td><td class="table-no">No</td>
+						</tr>
+						<tr>
+							<th>OWR-5</th><td class="table-no">No</td><td class="table-no">No</td><td class="table-no">No</td><td class="table-no">No</td><td class="table-no">No</td><td class="table-yes">RHW-10S (Dir)</td><td class="table-no">No</td><td class="table-no">No</td><td class="table-no">No</td><td class="table-no">No</td><td class="table-no">No</td><td class="table-partial">Yes (PP)</td><td class="table-no">No</td><td class="table-no">No</td><td class="table-no">No</td><td class="table-yes">Yes (Stub)</td><td class="table-black">Self</td><td class="table-no">No</td><td class="table-no">No</td>
+						</tr>
+						<tr class="tablerow-alt">
+							<th>TLA-7</th><td class="table-no">No</td><td class="table-no">No</td><td class="table-no">No</td><td class="table-no">No</td><td class="table-no">No</td><td class="table-yes">RHW-6C (Dir)</td><td class="table-no">No</td><td class="table-no">No</td><td class="table-no">No</td><td class="table-no">No</td><td class="table-no">No</td><td class="table-yes">Yes-Dual (Dir)</td><td class="table-no">No</td><td class="table-no">No</td><td class="table-partial">Yes (PP)</td><td class="table-no">No</td><td class="table-no">No</td><td class="table-black">Self</td><td class="table-yes">Yes (Stub)</td>
+						</tr>
+						<tr>
+							<th>AVE-6</th><td class="table-no">No</td><td class="table-no">No</td><td class="table-no">No</td><td class="table-partial">Yes (PP)</td><td class="table-no">No</td><td class="table-yes">RHW-6C (Dir)</td><td class="table-no">No</td><td class="table-no">No</td><td class="table-no">No</td><td class="table-no">No</td><td class="table-no">No</td><td class="table-yes">Yes-Dual (Dir)</td><td class="table-no">No</td><td class="table-no">No</td><td class="table-partial">Yes (PP)</td><td class="table-no">No</td><td class="table-no">No</td><td class="table-yes">Yes (Stub)</td><td class="table-black">Self</td>
+						</tr>
+					</table>
+					<br>
+					
+					<h4 class="leftheading">Diagonal Transitions</h4>
+					<table>
+						<tr class="tablerow-alt">
+							<th></th><th>Road</th><th>One-Way Road</th><th>TLA-3</th><th>AVE-2</th><th>ARD-3</th><th>All Other Networks</th>
+						</tr>
+						<tr>
+							<th>TLA-3</th><td class="table-yes">Yes (Stub)</td><td class="table-no">No</td><td class="table-black">Self</td><td class="table-partial">Yes (PP)</td><td class="table-partial">Yes (PP)</td><td class="table-no">No</td>
+						</tr>
+						<tr class="tablerow-alt">
+							<th>AVE-2</th><td class="table-yes">Yes (Stub)</td><td class="table-no">No</td><td class="table-partial">Yes (PP)</td><td class="table-black">Self</td><td class="table-partial">Yes (PP)</td><td class="table-no">No</td>
+						</tr>
+						<tr>
+							<th>ARD-3</th><td class="table-yes">Yes (Stub)</td><td class="table-no">No</td><td class="table-partial">Yes (PP)</td><td class="table-partial">Yes (PP)</td><td class="table-black">Self</td><td class="table-no">No</td>
+						</tr>
+						<tr class="tablerow-alt">
+							<th>OWR-1</th><td class="table-no">No</td><td class="table-yes">Yes (Stub)</td><td class="table-no">No</td><td class="table-no">No</td><td class="table-no">No</td><td class="table-no">No</td>
+						</tr>
+						<tr>
+							<th>OWR-3</th><td class="table-no">No</td><td class="table-yes">Yes (Stub)</td><td class="table-no">No</td><td class="table-no">No</td><td class="table-no">No</td><td class="table-no">No</td>
+						</tr>
+						<tr class="tablerow-alt">
+							<th>All Other Networks</th><td class="table-no">No</td><td class="table-no">No</td><td class="table-no">No</td><td class="table-no">No</td><td class="table-no">No</td><td class="table-no">No</td>
+						</tr>
+
+
+					</table>
+					<br>
+					
+					<h4 class="leftheading">Wide-Radius/Multi-Radius Curves</h4>
+					<table>
+						<tr class="tablerow-alt">
+							<th>Network</th><th>S-Curve Puzzle</th><th>45° Curve Puzzle</th><th>90° Curve Puzzle (Large)</th><th>90° Curve Puzzle (Small)</th><th>Multi-Radius Curves</th>
+						</tr>
+						<tr>
+							<th>TLA-3</th><td class="table-yes">Yes</td><td class="table-yes">Yes</td><td class="table-yes">Yes</td><td class="table-yes">Yes</td><td class="table-no">Not yet implemented</td>
+						</tr>
+						<tr class="tablerow-alt">
+							<th>AVE-2</th><td class="table-yes">Yes</td><td class="table-yes">Yes</td><td class="table-yes">Yes</td><td class="table-yes">Yes</td><td class="table-no">Not yet implemented</td>
+						</tr>
+						<tr>
+							<th>ARD-3</th><td class="table-yes">Yes</td><td class="table-yes">Yes</td><td class="table-yes">Yes</td><td class="table-yes">Yes</td><td class="table-no">Not yet implemented</td>
+						</tr>
+						<tr class="tablerow-alt">
+							<th>All Other Networks</th><td class="table-no">No, not planned</td><td class="table-no">No, not planned</td><td class="table-no">No, not planned</td><td class="table-no">No, not planned</td><td class="table-no">Not yet implemented</td>
+						</tr>
+					</table>
+					<br>
+						
+					<h4 class="leftheading">Fractional Angle Networking</h4>
+					<table>
+						<tr class="tablerow-alt">
+							<th>Networks</th><th>All Setups</th>
+						</tr>
+						<tr>
+							<th>All Networks</th><td class="table-no">No Support (not yet implemented).</td>
+						</tr>
+					</table>
+					<br>
+					
+					<h4 class="leftheading">Roundabout Support</h4>
+					<table>
+						<tr class="tablerow-alt">
+							<th>Networks</th>
+						</tr>
+					</table>
+
+					<h4 class="leftheading">Bridges</h4>
+					<table>
+						<tr class="tablerow-alt">
+							<th>Networks</th><th>Bridges</th>
+						</tr>
+						<tr>
+							<th>RD-4</th><td class="table-yes">Yes, Iron Girder Bridge (Avenue-based)</td>
+						</tr>
+						<tr>
+							<th>RD-6</th><td class="table-yes">Yes, Iron Girder Bridge (Avenue-based)</td>
+						</tr>
+						<tr>
+							<th>All Single-Tile Networks</th><td class="table-no">No Support (not yet implemented).</td>
+						</tr>
+						<tr>
+							<th>All Other Dual-Tile Networks</th><td class="table-no">No Support (not yet implemented).</td>
+						</tr>
+						<tr>
+							<th>All Triple-Tile Networks</th><td class="table-no">No Support (not possible without water-draining workaround, due to terrain engine limitations on bridge adjacency).</td>
+						</tr>
+					</table>
+					<br>
+					
+					<h4 class="leftheading">Elevated NWM Viaducts</h4>
+					<table>
+						<tr class="tablerow-alt">
+							<th>Networks</th><th>All Setups</th>
+						</tr>
+						<tr>
+							<th>All Networks</th><td class="table-no">No Support (not yet implemented).</td>
+						</tr>
+					</table>
+					
+					<h4 class="leftheading">Tunnels</h4>
+					<table>
+						<tr class="tablerow-alt">
+							<th>Networks</th><th>All Setups</th>
+						</tr>
+						<tr>
+							<th>All Networks</th><td class="table-no">No Support (not possible)</td>
+						</tr>
+					</table>
+			</div>
+			
+			
+			<div class="bannerfull"><a name="menu"></a><h4>&nbsp;List of Menu Items</h4></div>
+			<div class="regtext">
+				<h5 class="leftheading">NWM Starters</h5>
+				<p></p>
+				<span class="leftcolumn">
+					<ol>
+						<li>TLA-3 Orthogonal Starter / Diagonal Starter</li>
+						<li>AVE-2 Orthogonal Starter / Diagonal Starter</li>
+						<li>ARD-3 Orthogonal Starter / Diagonal Starter</li>
+						<li>NRD-4 Orthogonal Starter</li>
+						<li>OWR-1 Orthogonal Starter / Diagonal Starter</li>
+						<li>OWR-3 Orthogonal Starter / Diagonal Starter</li>
+						<li>TLA-5 Orthogonal Starter</li>
+						<li>RD-4 Orthogonal Starter</li>
+						<li>RD-6 Orthogonal Starter</li>
+						<li>OWR-4 Orthogonal Starter</li>
+						<li>OWR-5 Orthogonal Starter</li>
+						<li>TLA-7 Orthogonal Starter</li>
+						<li>AVE-6 Orthogonal Starter</li>
+					</ol>
+				</span>
+				<span class="rightcolumn">
+					<img class="screenshot" src="images/nwmstarters.jpg" alt="NWM Starters">
+				</span>
+				
+				<h5 class="leftheading">NWM Wide-Radius Curve Pieces</h5>
+				<p></p>
+				<span class="leftcolumn">
+					<ol>
+						<li>TLA-3 S-Curve</li>
+						<li>TLA-3 45-Degree Curve</li>
+						<li>TLA-3 90-Degree Curve (Large)</li>
+						<li>TLA-3 90-Degree Curve (Small)</li>
+						<li>AVE-2 S-Curve</li>
+						<li>AVE-2 45-Degree Curve</li>
+						<li>AVE-2 90-Degree Curve (Large)</li>
+						<li>AVE-2 90-Degree Curve (Small)</li>
+						<li>ARD-3 S-Curve</li>
+						<li>ARD-3 45-Degree Curve</li>
+						<li>ARD-3 90-Degree Curve (Large)</li>
+						<li>ARD-3 90-Degree Curve (Small)</li>
+					</ol>
+				</span>
+				<span class="rightcolumn">
+					<img class="screenshot" src="images/nwmcurves.jpg" alt="NWM Curves">
+				</span>
+			
+				<h5 class="leftheading">NWM Transition Puzzle Pieces</h5>
+				<p></p>
+				<span class="leftcolumn">
+					<ol>
+						<li>Road-to-TLA-3 Transition</li>
+						<li>Road-to-AVE-2 Transition</li>
+						<li>Road-to-ARD-3 Transition</li>
+						<li>Road-to-NMAVE-4 Transition</li>
+						<li>OWR-1-to-2 Transition</li>
+						<li>OWR-2-to-3 Transition</li>
+						<li>TLA-3-to-AVE-2 Transition</li>
+						<li>TLA-3-to-ARD-3 Transition</li>
+						<li>AVE-2-to-ARD-3 Transition</li>
+						<li>Road-to-TLA-3 Transition Diagonal</li>
+						<li>Road-to-AVE-2 Transition Diagonal</li>
+						<li>Road-to-ARD-3 Transition Diagonal</li>
+						<li>OWR-1-to-2 Diagonal Transition</li>
+						<li>OWR-2-to-3 Diagonal Transition</li>
+						<li>Road-to-AVE-2 Transition Type B*</li>
+						<li>AVE-4-to-AVE-2 Transition</li>
+						<li>TLA-3-to-ARD-3 Transition Diagonal*</li>
+						<li>TLA-3-to-AVE-2 Transition Diagonal*</li>
+						<li>AVE-2-to-ARD-3 Transition Diagonal*</li>
+						<li>MAVE-4 to AVE-4 Transition Type A</li>
+						<li>MAVE-4 to AVE-4 Transition Type B*</li>
+						<li>MAVE-4 to TLA-5 Transition </li>
+						<li>MAVE-4 to MAVE-6 Transition</li>
+						<li>MAVE-6 to AVE-4 Transition Type A</li>
+						<li>MAVE-6 to AVE-4 Transition Type B*</li>
+						<li>MAVE-6 to TLA-5 Transition </li>
+						<li>TLA-5 to AVE-4 Transition </li>
+						<li>OWR-3 to OWR-4 Transition </li>
+						<li>OWR-3 to OWR-5 Transition*</li>
+						<li>OWR-4 to OWR-5 Transition</li>
+						<li>AVE-4 to AVE-6 Transition*</li>
+						<li>TLA-7 to AVE-6 Transition</li>
+					</ol>
+				</span>
+				<span class="rightcolumn">
+					<img class="screenshot" src="images/nwmpptransitions.jpg" alt="NWM Curves">
+				</span>
+				
+				<h5 class="leftheading">NWM Neighbor Connector Pieces</h5>
+				<p></p>
+				<span class="leftcolumn">
+					<ol>
+						<li>TLA-5 Neighbor Connector</li>
+						<li>MAVE-4 Neighbor Connector</li>
+						<li>MAVE-6 Neighbor Connector</li>
+						<li>TLA-7 Neighbor Connector</li>
+						<li>AVE-6 Neighbor Connector</li>		 				
+					</ol>
+				</span>
+				<span class="rightcolumn">
+					<img class="screenshot" src="images/nwmnc.jpg" alt="NWM Neighbor Connectors">
+				</span>
+
+				
+				<h5 class="leftheading">NWM Triple-Tile Network Turn Lane Extension Pieces (TuLEPs) [OUTDATED]</h5>
+				<p></p>
+				<span class="leftcolumn">
+					<ol>
+						<li>TLA-7/AVE-6 Type 130 Transition</li>
+						<li>TLA-7/AVE-6 Type 130 TuLEP</li>
+						<li>TLA-7/AVE-6 Type 130 Blank TuLEP</li>
+						<li>TLA-7/AVE-6 Type 130 x Avenue Type 120 (a) +-Intersection (b) T-Intersection</li>
+						<li>TLA-7/AVE-6 Type 130 x Road Type 110 (a) +-Intersection (b) T-Intersection</li>
+						<li>TLA-7/AVE-6 Type 130 x TLA-7/AVE-6 Type 130 (a) +-Intersection (b) T-Intersection</li>		  
+					</ol>
+				</span>
+				<span class="rightcolumn">
+					<img class="screenshot" src="images/nwmtuleps.jpg" alt="NWM TuLEPs">
+				</span>
+
+				
+				<h5 class="leftheading">NWM Bridges (found under the Avenue Bridges dialog)</h5>
+				<p></p>
+				<span class="leftcolumn">
+					<ol>
+						<li>RD-4 Iron Girder Bridge</li>
+						<li>RD-6 Iron Girder Bridge</li>
+					</ol>
+				</span>
+				<span class="rightcolumn">
+					<img class="screenshot" src="images/nwmbridges.jpg" alt="NWM Bridges">
+				</span>
+
+			</div>
+
+
+
+
+			<div class="bannerfull"><a name="neighbor"></a><h4>&nbsp;A Note Regarding Neighbor Connections</h4></div>
+			<div class="regtext">
+				<p>Neighbor connections are possible for all Road-based NWM networks, though the three Road-based multi-tile networks (TLA-5, RD-4, and RD-6) require either (a) conversion to Avenue before the 
+				edge of the city tile, or (b) the use of special Neighbor Connector pieces in order to provide proper functionality.  Note that the Avenue conversion method is, at present, more reliable than
+				the Neighbor Connector pieces, which still have some unexplained issues requiring further investigation (see <a href="#knownissues">the Known Issues section</a>).</p>
+				<p>The TLA-7 and AVE-6 also have Neighbor Connector pieces, but can natively 
+				create the connections, albeit with the caveat of crowding on the central tile of each network at the border, which also exists to an extent with the piece-based approach.</p>
+				<p>In order to use the Neighbor Connector pieces, simply build the neighbor connection as normal by dragging the override to the edge of the city tile with the Road tool, then
+				place the appropriate Neighbor Connector for the network over top of the neighbor connection arrows.  Note that the game's default 
+				Neighbor Connection arrows will not change direction, nor do they need to in order for the connection to function with the connector pieces.</p>
+				
+				<img class="screenshot" src="images/nwmneighbor.jpg" alt="NWM Neighbor Connection">
+				
+				<p>With the single-tile Road-based networks, neighbor connections may be built normally by simply dragging the network to the edge of the tile, without any alteration.
+				One-Way Road-based networks cannot create neighbor connections, much like their base network.  This can be worked around to an extent, however--see the <a href="#knownissues">Known Issues section</a>.</p>
+			</div>
+
+
+			<div class="bannerfull"><a name="turnlanes"></a><h4>&nbsp;Turn Lanes and NWM Networks</h4></div>
+			<div class="regtext">
+			<p>The best way to add turn lanes to NWM networks is through the <a href="../turn-lanes/turn-lanes.html#ftl">FLEX Turn Lanes (FTLs)</a>.  The FTL system includes modular draggable/FLEX components, including
+			some pre-fabricated setups, which can be plopped in a single click.  The following NWM networks are currently capable of interfacing with the FTL system:</p>
+			<ul>
+				<li>TLA-3: Type 110</li>
+				<li>AVE-2: Type 110</li>
+				<li>ARD-3: Type 110</li>
+				<li>TLA-5: Type 120 and Type 220</li>
+				<li>TLA-7: Type 130</li>
+				<li>AVE-6: Type 130</li>
+			</ul>
+			<p>All NWM networks also support at least some capabilities with the FTL Slip Lanes as well (ARD-3 support, however, is limited, due to its complexity).  NWM-related features with the FTL system
+			are planned to be expanded greatly with future updates.</p>
+			<p>The NWM may also interface with the older Turn Lane Extension Pieces (TuLEPs), which have since become deprecated/outdated with the introduction of the FLEX Turn Lanes.  The NWM installs a set
+			of Type 130 TuLEPs, designed for use with the NWM's triple-tile networks, the TLA-7 and AVE-6.  The contents of this are listed above in the <a href="#menu">menu section</a>.</p>
+			<p>Support for the older Avenue and Road Turning Lanes does not exist with the NWM.  The NWM is actually part of the reason the Road Turning Lanes plugin was switched away from its old "automatic" construction method, to the 
+			new "semi-automatic" approach.</p>
+			<p>For more details, see the <a href="../turn-lanes/turn-lanes.html">Turn Lanes Feature Guide</a>.</p>
+			</div>
+
+
+			<div class="bannerfull"><a name="knownissues"></a><h4>&nbsp;Known Issues</h4></div>
+			<div class="regtext">
+				<p>Below is a list of known issues with the Network Widening Mod plugin, that, at present, have not or <em>cannot</em> be addressed:</p>
+				<ul>
+					<li>Crossover paths on the TLA networks, as well as the OWR-4 and OWR-5, may cause automata (vehicles) to behave strangely, including weaving or circular/wrong-way driving.  This is
+					especially pronounced with Generated Automata (i.e. moving trucks, police cars, and other non-commute-related vehicles that spawn from nearby lots), as opposed to Commute Automata.  This is a limitation
+					of the game's automata engine, and there is no known solution that does not break the otherwise very useful functionality of the networks, which the NAM Team prioritizes over simply visual effects,
+					like automata behavior.</li>
+					<li>The NWM Neighbor Connector Pieces, despite being set up identical to the perfectly functional RealHighway (RHW) Neighbor Connector Pieces, have had a tendency to not accept as much traffic
+					as they should.  For dual-tile networks, simply switch to Avenue for the connection.  With triple-tile networks, the center tile will allow for a functional connection, though congestion is to be
+					expected.  Further investigation on this issue is planned.</li>
+					<li>Complex setups in which certain combinations of otherwise supported intersections/crossings and/or sharp curves are placed directly adjacent to one another, with no gap, may cause NWM network overrides to 
+					destabilize.  This is due to a lack of override code to cover the adjacency situation, and is not necessarily a bug.  If you feel the particular adjacency situation is useful enough that it should be covered, 
+					please stop by our <a href="#support-development">support threads</a> (see "Information on Support and Development Updates" below) with a screenshot of the particular setup, so we can make a determination and/or help you find an alternate solution that is 
+					presently supported.</li>
+					<li>The NWM's One-Way Road variants cannot form Neighbor Connections, mainly as the base One-Way Road network cannot form them, either.  There is a workaround if one installed the NAM's
+					<a href="../realhighway/realhighway.html">RealHighway (RHW)</a> plugin, by transitioning their NWM OWRs to RHWs just before the edge of the city tile, and using the RHW's Neighbor Connector pieces.
+					</li>
+					<li>The NWM OWR networks do not have any traffic signals facing their approaches at intersections, due to the fact that the stop points that are necessary for signal functionality do
+					not work by default on the base One-Way Road network.  This will be addressed in the future with an extension to the NAM's <a href="../turn-lanes/turn-lanes.html#sitap">Signalized Intersection and Turn Arrow 
+					Project(SITAP).</li>
+				</ul>
+			</div>
+
+
+			<div class="bannerfull"><a name="support-development"></a><h4>&nbsp;Information on Support and Development Updates</h4></div>
+			<div class="regtext">
+				<p>For technical support and information on new features coming to the Network Widening Mod in future releases, please check out the official <em>Network Widening Mod (NWM) - Development and Support</em>
+				threads on the forums at <a href="http://sc4devotion.com/forums/index.php?topic=1200.0">SimCity 4 Devotion</a> and 
+				<a href="http://community.simtropolis.com/forums/topic/43008-network-widening-mod-nwm-development-and-support/">Simtropolis</a>.
+			</div>
+
+			
+			<div class="bannerfull"><h4></h4></div>
+			
+			<div>
+				<p class="navigation">
+					<a href="../../1-start.html">Start</a>&nbsp;
+					<a href="../../2-installation.html">Installation</a>&nbsp;
+					<a href="../../3-basics.html">In-Game Basics</a>&nbsp;
+					<a href="../../4-content-overview.html">Content Overview</a>&nbsp;
+					<a href="../../5-faq.html">FAQs</a>&nbsp;
+					<a href="../../6-glossary.html">Glossary</a>&nbsp;
+					<a href="../../7-history.html">History</a>&nbsp;
+					<a href="../../8-technical.html">Tech Info</a>&nbsp;
+					<a href="../../9-credits.html">Credits</a>&nbsp;
+					<a href="../quicklink.html">Feature Guides</a>
+				</p>
+			</div>
+			
+			<div class="footer"><p>&nbsp;©2017 NAM Team</p></div>
+		</div>
+	</body>
+</html>

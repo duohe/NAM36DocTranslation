@@ -1,0 +1,190 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>Network Addon Mod - 在游戏中的基础操作</title>
+		<link rel="stylesheet" type="text/css" href="namdoc.css">
+	</head>
+
+	<body>
+		<div class="main">
+			<div class="logobanner"><img src="images/readmebanner.png" alt="readmebanner"></div>
+			
+			<div>
+				<p class="navigation">
+					<a href="1-start.html">开始</a>&nbsp;
+					<a href="2-installation.html">安装</a>&nbsp;
+					<a href="3-basics.html">游戏中的基础操作</a>&nbsp;
+					<a href="4-content-overview.html">目录</a>&nbsp;
+					<a href="5-faq.html">FAQs</a>&nbsp;
+					<a href="6-glossary.html">术语</a>&nbsp;
+					<a href="7-history.html">更新记录</a>&nbsp;
+					<a href="8-technical.html">技术信息</a>&nbsp;
+					<a href="9-credits.html">鸣谢</a>&nbsp;
+					<a href="feature-guides/quicklink.html">功能指南</a>
+				</p>
+			</div>
+			
+			<div class="bannerfull"><h4>&nbsp;NAM在游戏中的基础操作</h4></div>
+			<div class="regtext">
+				<p>尽管NAM具有令人难以置信的详尽无遗的功能集（以至于很少有玩家会充分利用所有这些功能），但该mod中所有交通网络扩展的基础上，还是一些基本概念。了解这些概念将使适应NAM中包含的各种工具的过程变得更加容易。</p>
+				
+				<ul>
+					<li><a href="#basic-content">内容的基本类型</a></li>
+					<li><a href="#navigating-menus">浏览NAM菜单和项</li>
+					<li><a href="#starter-pieces">使用起始块和覆盖的交通网络</li>
+					<li><a href="#puzzle-pieces">使用静态拼块</li>
+					<li><a href="#flex-pieces">使用FLEX块</li>
+					<li><a href="#pattern-drag">使用基于模式的可拖动项</li>
+					<!--
+					<li><a href="#disconnectors">Using Disconnectors</li>
+					<li><a href="#stations">Using Transit Stations</li>
+					<li><a href="#override">What To Do When an Override Network Stops Overriding</li>
+					<li><a href="#simulator">Differences Between Maxis and NAM Pathfinding and Traffic Simulation</li>
+					-->
+				</ul>
+			</div>
+			
+			<div class="bannerfull"><a name="basic-content"></a><h4>&nbsp;内容的基本类型</h4></div>
+			<div class="regtext">
+				<p>相对于所述NAM内的所有交通网络的扩展，它们可分为两类：<strong>可拖动的项</strong>，通过以某种方式拖动交通网络来放置；<strong>扑通的项</strong>，通过单击进行放置。</p>
+			
+				<p>可拖动项的子类型</p>
+				<ul>
+					<li>简单的可拖动项，只需通过立即显而易见的直观方式拖动网络（或网络组合）即可建造。</li>
+					<li>基于模式的可拖动项, 通过使用给定的网络（或网络组合）拖出特殊模式来建造。</li>
+				</ul>
+				
+				<p>扑通项子类型</p>
+				<ul>
+					<li>静态拼块（通常简称为“拼块”）（Static Puzzle Pieces），是运输网络块，不与周围的网络延伸相互作用，并且在放置后保持固定的形式。</li>
+					<li>起始块（Starter Pieces），是非常简单的交通网络块，专门设计用于与游戏的基本交通网络进行交互，并视情况覆盖它们，从而改变其外观和行为。
+					在没有添加其他“真实”交通网络的情况下，起始块允许NAM模拟这些添加。起始块转换的最终结果也成为<em>Override Networks</em>。</li>
+					<li>FLEX块（FLEX Pieces）, 是与周围延伸的网络交互的交通网络块，它不像静态拼块那样，它可以被各种可拖动项、起始块和其它FLEX块替换，以此达到单个块实现多种功能的目的。
+					在某些情况下，FLEX块可以被当做更为复杂的起始块，用于达到特定的目的。</li>
+					<li>隔离器（Disconnectors）,它是游戏默认的推土机工具的更精致版本，主要用于<a href="feature-guides/realhighway/realhighway.html">RealHighway</a>。</li>
+					<li>挖坑机/升高机, 可在根据放置次数来升高或降低地形。（不要将这些与旧的挖坑机/升高机LOT混淆。）</li>
+					<li>转换使能的Lot（Transit-Enabled Lots (or "TE Lots")）,
+					从技术上讲并不是交通网络项，而是可以接受从交通网络，运输工具输入并服务于其他运输相关目的的Lot。
+					通常，它们用于公交车站，因为它们允许模拟市民切换公交类型（即从乘坐火车到步行）。
+					收费站也是TE Lots的常见用法。</li>
+				</ul>
+
+			</div>
+			
+			<div class="bannerfull"><a name="navigating-menus"></a><h4>&nbsp;Navigating NAM Menus and Items</h4></div>
+			<div class="regtext">
+				<p>While Simple and Pattern-Based Draggable Items are constructed directly through dragging the game's base transportation networks, all ploppable items must be selected via the game's menu system.  The positioning
+				of a given object can be controlled by using the following keys:</p>
+				
+				<ul>
+					<li><em>Home</em> - rotate clockwise</li>
+					<li><em>End</em> - rotate counter-clockwise</li>
+				</ul>
+				
+				<p>Note that with some items, Home/End rotation may produce a variant on the piece (i.e. a diagonal equivalent), or in some cases--particularly with the Flexible Underpasses (FLUPs)--may be the means to access entirely 
+				different pieces.  These situations will be noted in the catalogue listings in the <a href="feature-guides/quicklink.html">Feature Guides</a> included in this documentation.</p>
+				
+				<p>All Ploppable Items </em>except Transit-Enabled Lots</em>--can all be combined into a set that is accessed under a single menu button, through the use of a <em>TAB Loop</em> (known internally as a "RotationRing").  
+				TAB Loops are named because the use of the <em>TAB</em> key, and key combinations involving it, allow one to cycle through the various items under the selected button.  Navigation through the various options
+				under a single button is controlled using the following keys:</p>
+				
+				<ul>
+					<li><em>TAB</em> - forward through the loop</li>
+					<li><em>Shift-TAB</em> - backward through the loop</li>
+				</ul>
+				
+				<p>For instance, if a TAB Loop contains a total of 10 Ploppable Items, it would begin with Item 1, TAB would move forward to Item 2, Item 3, and so on, while Shift-TAB would move in reverse to Item 10, Item 9, etc.  
+				Once the end of the loop is reached, it will cycle back around to Item 1 and continue from there.</p>
+				
+				<p>Each Transit-Enabled Lot must have its own menu button, as Lot-based items cannot be placed in TAB Loops.  For more information, see the <a href="8-technical.html">Technical Information</a> documentation.</p>
+				
+				<p><strong>Special Note to <em>Steam</em> Users</strong>: The Steam Overlay is set to use the key combination <em>Shift-TAB</em> by default.  Through the Steam client, you will need to either change the key 
+				combination for the overlay, or disable it altogether in order to allow backward rotation through TAB Loops.  The use of TAB and Shift-TAB by SimCity 4 is hardcoded, and attempting to use Shift-TAB without
+				changing the overlay shortcut will cause the overlay to appear, instead of allowing one to navigate a TAB Loop in reverse as intended.</p>
+			</div>
+			
+			<div class="bannerfull"><a name="puzzle-pieces"></a><h4>&nbsp;Using Static Puzzle Pieces</h4></div>
+			<div class="regtext">
+				<p>Static Puzzle Pieces, once selected, will produce a hovering preview, showing the footprint of the piece over the terrain.  Simply align the footprint with the desired position, using
+				the Home and End keys to rotate and the mouse to align, and click the left mouse button to place the piece.  If the preview appears to be highlighted in red, this means that the terrain or existing
+				transportation network/lot setup underneath will not permit the piece to be placed.  Static Puzzle Pieces can generally be placed over growable RCI (Residential/Commercial/Industrial) buildings, and will destroy
+				any that lie in the footprint.</p>
+				<p>If you are planning on using sections of draggable network in the vicinity of the Static Puzzle Piece, unless the piece happens to have connector stubs, it is generally advisable to build the draggable network 
+				first, at least up to the edge of the Static Puzzle Piece's footprint, and then place the piece itself over top.</p>
+				<p>Some Static Puzzle Pieces--particularly those in the RealHighway (RHW) plugin--may have Starter Piece stubs attached to them, which, while easing the process of connecting the piece to the surrounding
+				network, does limit the placement options for the piece to mostly flat terrain.</p>
+				<p>Static Puzzle Pieces do not accept overrides, and in addition to not changing to match their surroundings, will block the continuation of Override Networks.  The only way to change 
+				the setup is to bulldoze the Static Puzzle Piece, and replace it with something else.</p>
+			</div>
+			
+			<div class="bannerfull"><a name="starter-pieces"></a><h4>&nbsp;Using Starter Pieces and Override Networks</h4></div>
+			<div class="regtext">
+				<p>Starter Pieces, once selected, will produce a hovering preview, showing the footprint of the piece over the terrain.  Simply align the footprint with the desired position, using
+				the Home and End keys to rotate and the mouse to align, and click the left mouse button to place the piece.  If the preview appears to be highlighted in red, this means that the terrain or existing
+				transportation network/lot setup underneath will not permit the piece to be placed.</p>
+				<p>All Starter Pieces have a "Construction Tile", which is required by the game.  The Construction Tile will be placed at the site of the cursor, and will self-destruct
+				upon placement.  If there is an existing stretch of network underneath the Construction Tile, a 1x1 "gap" will appear in its place after placement.  Starter Pieces can generally be placed over growable RCI 
+				(Residential/Commercial/Industrial) buildings, and will destroy any that lie in the footprint--this is true of both the starter itself, and the Construction Tile.</p>
+				<p>Each Starter Piece will have a "base network" associated with it, which will be indicated on the tool-tip for the Starter Piece, shown while the piece is selected.  In order to activate the override
+				permitted by the Starter Piece, select the indicated network, and then drag the base network <em>through</em> the Starter Piece.  It should cause the base draggable network to convert to match the appearance
+				of the Starter Piece, producing an Override Network.</p>
+			</div>
+			
+			<div class="bannerfull"><a name="flex-pieces"></a><h4>&nbsp;Using FLEX Pieces</h4></div>
+			<div class="regtext">
+				<p>FLEX Pieces, once selected, will produce a hovering preview, showing the footprint of the piece over the terrain.  Simply align the footprint with the desired position, using
+				the Home and End keys to rotate and the mouse to align, and click the left mouse button to place the piece.  If the preview appears to be highlighted in red, this means that the terrain or existing
+				transportation network/lot setup underneath will not permit the piece to be placed.</p>
+				<p>All FLEX Pieces have a "Construction Tile", which is required by the game.  The Construction Tile will be placed at the site of the cursor, and will self-destruct
+				upon placement.  If there is an existing stretch of network underneath the Construction Tile, a 1x1 "gap" will appear in its place after placement.  FLEX Pieces can generally be placed over growable RCI 
+				(Residential/Commercial/Industrial) buildings, and will destroy any that lie in the footprint--this is true of both the starter itself, and the Construction Tile.</p>
+				<p>Many FLEX Pieces will accept input from Override Networks, changing their appearance and function accordingly.  To transform a FLEX Piece to a new configuration, simply drag the Override Network into
+				the appropriate part of the FLEX Piece.  If the setup is supported, it should transform to fit.</p>
+				<p>Some pieces of this type can also serve as Starter Pieces.  For specific instances, see the <a href="feature-guides/quicklink.html">Feature Guides</a>.</p>		
+			</div>
+			
+			<div class="bannerfull"><a name="pattern-drag"></a><h4>&nbsp;Using Pattern-Based Draggable Items</h4></div>
+			<div class="regtext">
+				<p>Pattern-Based Draggable Items are items built using a specific dragging pattern with one of the game's base networks.  Upon completing the appropriate pattern, the item will convert over to the desired setup.
+				Pattern-Based Draggable Items exist throughout the NAM's Plugins, with prominent examples in the Roundabout plugins, Wide-Radius Curves and Fractional Angle Networking, the transitions in 
+				the Network Widening Mod (NWM) plugin, and on/offramps in the RealHighway plugin.</p>	
+				<p>Many Pattern-Based Draggable Items will accept input from the default networks and/or Override Networks, changing their appearance and function accordingly.  To transform a Pattern-Based Draggable Item to a new configuration, simply drag 
+				the desired network into the appropriate part of the pattern.  If the setup is supported, it should transform to fit.</p>
+			</div>
+			<!--
+			<div class="bannerfull"><a name="disconnectors"></a><h4>&nbsp;Using Disconnectors</h4></div>
+			<div class="regtext"></div>
+			
+			<div class="bannerfull"><a name="stations"></a><h4>&nbsp;Using Transit Stations and Transit-Enabled Lots</h4></div>
+			<div class="regtext"></div>
+			
+			<div class="bannerfull"><a name="clickaround"></a><h4>&nbsp;Dealing With Quirks and the "Click-Around" Technique</h4></div>
+			<div class="regtext"></div>
+			
+			<div class="bannerfull"><a name="simulator"></a><h4>&nbsp;Differences Between Maxis and NAM Pathfinding and Traffic Simulation</h4></div>
+			<div class="regtext"></div>
+			-->
+			
+			<div class="bannerfull"><h4></h4></div>
+			
+			<div>
+				<p class="navigation">
+					<a href="1-start.html">Start</a>&nbsp;
+					<a href="2-installation.html">Installation</a>&nbsp;
+					<a href="3-basics.html">In-Game Basics</a>&nbsp;
+					<a href="4-content-overview.html">Content Overview</a>&nbsp;
+					<a href="5-faq.html">FAQs</a>&nbsp;
+					<a href="6-glossary.html">Glossary</a>&nbsp;
+					<a href="7-history.html">History</a>&nbsp;
+					<a href="8-technical.html">Tech Info</a>&nbsp;
+					<a href="9-credits.html">Credits</a>&nbsp;
+					<a href="feature-guides/quicklink.html">Feature Guides</a>
+				</p>
+			</div>
+			
+			<div class="footer"><p>&nbsp;�2017 NAM Team</p></div>
+		</div>
+	</body>
+</html>
