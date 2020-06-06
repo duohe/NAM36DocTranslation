@@ -85,136 +85,162 @@
 							<strong>译者注，是在懒得去研究，此处为机翻：</strong>自从NAM在2013年取消了长期禁止添加大量物品的禁令以来，NAM的一些附加铁路式网络选件的基站现在甚至已经成为一揽子计划的一部分。
 							（Since the NAM struck down its long-standing prohibition on including lots back in 2013, basic stations for some of the NAM's additional rail-type network options are even part of the package now.）</p>
 						<li class="faq">为什么安装此mod后游戏在加载时崩溃并回到桌面？</li>
-							<p>=NAM可能导致游戏崩溃回到桌面（CTD）的唯一原因是，您运行的是原始版本的SimCity 4（而不是Deluxe / Rush Hour）。 如果您正在运行“豪华版/尖峰时刻版”，则可能要检查可能已安装的所有其他插件。</p>
-						<li class="faq">What's with all the acronyms?  Is there a list of what they all mean?</li>
-							<p>Acronyms are omnipresent in the SC4 content world, and they serve a valuable purpose as shorthand.  They can seem a bit arcane at first, however.
-							The <a href="5-glossary.html">Glossary</a> in this documentation contains all the pertinent NAM-related ones you may encounter.</p>
-						<li class="faq">Why are none of the icons showing up after I've installed the NAM?</li>
-							<p>You may not have installed the NAM correctly.  See the <a href="1-instructions.html">Installation Instructions</a> page.</p>
-						<li class="faq">Why am I seeing duplicate icons?</li>
-							<p>You may have two copies of a given plugin installed.  You'll need to find and remove the duplicate, which could be from an earlier NAM or NAM
-							component plugin release, which could interfere with your NAM installation in other ways.</p>
-						<li class="faq">Why am I getting a red arrow/gray cursor when I click one of the new icons in game?</li>
-							<p>In most situations, this is an indication that you have the Controller file from an outdated NAM release, or an incompatible RUL-bound
-							transit mod installed.  You'll need to remove the offending files.  The one exception is with the little icon with the NAM logo at the bottom
-							of the Highways menu--this button is not meant to be pressed, but rather, hovered over to show version information.  If the version information
-							here says anything other than "[insert]", that's a definite sign there's an outdated/incompatible file lurking about your Plugins folder.</p>
-						<li class="faq">After installing the NAM, why are the tiles leading up to my intersections suddenly orange or red in the Congestion Data View?</li>
-							<p>The NAM's traffic simulator plugin, with its default settings, amplifies the effect of the Intersection and Turn Capacity Effect property, affecting
-							network tiles that are within a 2-tile radius of an intersection (or transition) to better simulate the effects of queues at intersections (esp. signalized ones).
-							If you don't like this effect, you can tweak it using the NAM Traffic Simulator Configuration Tool (TSCT).  Lowering the value of the "Intersection Capacity Effect"
-							will diminish the redness of the tiles leading up to your intersections.</p>
-						<li class="faq">Why are the cars disappearing in game?</li>
-							<p>The "cars" are not really there in the traffic simulation--they're simply a visual effect that merely has a casual correlation to actual traffic data in the game.
-							Being visual effects, they can eat up processing power, and in order to keep the game from becoming overloaded, the game's engine puts a finite limit on
-							how many vehicular automata can show up at one time.  Over that limit, and they disappear.  Certain plugin options for Automata Simulation can allow 
-							more automata to stay on the screen at one time, though keeping the cars on the road all the time is simply an impossibility, due to the way the game is programmed.
-							SimCity 4 is a statistics-based simulator, not an agent-based simulator (as SimCity (2013) and Cities: Skylines are).</p>
-						<li class="faq">What are the differences between "puzzle pieces", "FLEX pieces", "starter pieces", and TE lots"?</li>
-							<p><em>Puzzle pieces</em> are ploppable network items, and are placed through the IntersectionOrdering RUL file (also known as RUL 0x10000000 or RUL-0).  The interchanges
-							included in the base game for the Elevated and Ground Highway networks are puzzle pieces.  They are effectively static in their implementation--once they are plopped, they cannot
-							be altered without bulldozing.  In effect, they are old dogs that cannot be taught new tricks.</p>
-							<p><em>Starter pieces</em> are ploppable network items, usually small in size, which are designed primarily to initiate a network override, allowing any of the game's draggable base networks
-							to assume a new appearance and/or new functionality, often to the point of behaving like new networks.  One simply places an instance of the starter piece, and drags the appropriate base network through the 
-							starter piece to initiate the override.  The technique used to make them was first developed by <strong>smoncrie</strong> in 2006, and was first used in the implementation of Draggable Ground Light Rail (GLR)
-							in the Version 21 release of June 2007.  Examples of starter pieces can be found all throughout the NAM, particularly with the RealHighway (RHW) plugin, the Network Widening Mod (NWM), and the Street Addon Mod (SAM).</p>
-							<p><em>FLEX pieces</em> might initially appear to be identical to puzzle pieces, as they are also ploppable items, but unlike garden variety puzzle pieces, they <em>can</em> be taught new tricks, and can
-							change to better fit their surroundings, accepting input from starter pieces, or sometimes even acting as combination starter pieces/transitions.  Examples of these include the Diagonal Street Helper Pieces, the Avenue Roundabouts, and many newer components in the RealHighway (RHW) system (almost all of which
-							are prefaced by the term "FLEX" in their name).  Because of this, a single FLEX piece can fulfill a range of functions that could otherwise require as many as 50 conventional puzzle pieces.  The game also treats FLEX pieces more akin
-							to draggable network items upon their placement in the game.</p>
-							<p><em>TE lots</em> (short for <em>transit-enabled lots</em>) are lot-based items, also ploppable, but are not RUL bound, and are primarily intended to allow one's sims to switch transit types (i.e. from being on a train to walking) or add some
-							non-transit purpose to a particular stretch of a network.  The most common uses of TE lots are transit stations and toll booths.</p>
-							<p>For more details, see here.</p>
-						<li class="faq">How do I move between the different puzzle/FLEX/starter pieces, and how do I rotate them?</li>
-							<p>The TAB key will move forward through a given set of puzzle pieces under a single icon, and Shift-TAB will move backwards.
-							Rotation is accomplished through the Home and End keys.  For MacBook users, it's actually Fn+Home and Fn+End.</p>
-						<li class="faq">What is up with the icon with the NAM logo at the bottom of the Highways menu, and why does it do nothing when I click it?</li>
-							<p>The NAM logo icon is a diagnostic tool, which, if hovered over, will show you which version of the NAM controller you are currently running.  This
-							can be useful in diagnosing issues pertaining to the controller.</p>
-						<li class="faq">Why is the game crashing after I place a puzzle piece?</li>
-							<p>This is a bug in the game itself, typically triggered by attempting to place conventional puzzle pieces in the vicinity of TE lots.  If, in the process of constructing a puzzle piece,
-							the footprint of the puzzle piece overlaps that of the TE lot, even before the puzzle piece is placed, the game generally does not understand the configuration, and will immediately crash.
-							This is an issue within the game's executable, and as a result, it was long deemed an unsolvable issue.</p>
+							<p>NAM可能导致游戏崩溃回到桌面（CTD）的唯一原因是，您运行的是原始版本的SimCity 4（而不是Deluxe / Rush Hour）。 如果您正在运行“豪华版/尖峰时刻版”，则可能要检查可能已安装的所有其他插件。</p>
+						<li class="faq">有缩写词解释表吗？</li>
+							<p>首字母缩略词在SC4内容世界中无处不在，它们充当速记的重要目的。但一开始您可能会感觉比较晦涩。 
+							本文档中的<a href="5-glossary.html">词汇表</a>包含您可能遇到的所有与NAM相关的词汇。</p>
+						<li class="faq">安装NAM后，为什么没有显示相关图标？</li>
+							<p>您可能未正确安装NAM。 请参阅<a href="1-instructions.html">安装说明</a>页面。</p>
+						<li class="faq">为什么我看到重复的图标？</li>
+							<p>您可能安装了一个插件的两个副本。 
+							您需要查找并删除重复项，这些重复项可能来自较早的NAM或NAM组件插件版本，
+							这可能某些方面干扰您的NAM安装。</p>
+						<li class="faq">单击游戏中的新图标时，为什么会出现红色箭头/灰色光标？</li>
+							<p>在大多数情况下，这表明您已从过时的NAM版本中安装了Controller文件，
+							或者安装了不兼容的RUL绑定的交通模块。 您需要删除有问题的文件。 
+							有一个例外是高速公路菜单底部带有NAM徽标的小图标，它不是可点击的按钮，而是悬停在上面以显示版本信息的。 
+							如果此处的版本信息中显示“ [insert]”以外的任何内容，
+							则表明您的Plugins文件夹中存在一个过时/不兼容的文件。</p>
+						<li class="faq">安装NAM后，为什么路口在“拥塞数据视图”中突然变成橙色或红色？</li>
+							<p>默认配置的NAM的交通模拟器插件，
+							会放大“路口（Intersection ）”和“转弯通行能力（Turn Capacity Effect ）”属性的效果，
+							影响相交（或过渡）2格半径范围内的网格，以更好地模拟交叉路口队列的效果 （尤其是有交通信号的地方）。 
+							如果您不喜欢这种效果，则可以使用NAM Traffic Simulator配置工具（TSCT）对其进行调整。 
+							降低“路口通行能力效果（Intersection Capacity Effect）”的值将减低路口的红色效果。</p>
+						<li class="faq">为什么汽车在游戏中消失了？</li>
+							<p>交通模拟器中并没有真正存在“汽车”，它们只是一种视觉效果，
+							与游戏中的实际交通数据具有随意（关系不是太大）的关联。 
+							作为视觉效果，它们会消耗计算器处理能力，
+							所以为了防止游戏过载，游戏引擎对一次可以显示多少辆汽车自动机设置了有限的数量。
+							超过该限制，它们会自动消失。 
+							尽管由于游戏的编程方式，始终将汽车始终保持在路上是不可能的。
+							但一些自动机模拟器的插件选项可以设置让更多的自动机显示在屏幕上，
+							SimCity 4是基于统计的模拟器，而不是基于代理的模拟器（和SimCity（2013）和Cities：Skylines一样）。</p>
+						<li class="faq">“Puzzle pieces”，“ FLEX pieces”，“Starter pieces”和“ TE lots”有什么区别？</li>
+							<p><em>Puzzle pieces</em>是可扑通的交通网络项，
+							并且是通过IntersectionOrdering RUL文件（也称为RUL 0x10000000或RUL-0）放置的。
+							游戏中包含的原始高架和地面高速公路网络的转换是拼块
+							（译者注：即高架高速和地面高速互相转换的东西是拼块的一种）。
+							它们在执行中实际上是静态的，即一旦被放置，就不能在不使用推土机的情况下对其进行更改。
+							实际上，它们是老狗，不能教新的花样（译者注：字面翻译过来的）。</p>
+							<p><em>Starter pieces</em>
+							是可扑通的交通网络项，通常较小，主要用于启动交通网络铺设，
+							使游戏的任何可拖动基础交通网络都呈现新的外观和/或新的功能，常常表现得像新交通网络一样 。 
+							只需放置一个起始块（Starter Pieces），然后将适当的基础交通网络拖动通过起始块即可启动网络的铺设。
+							该技术最早是由<strong>smoncrie</strong>在2006年开发的，
+							并且在2007年6月发行的Version 21中首次用于可拖动的地面轻轨（GLR）中。 
+							NAM中很多地方都使用了起始块，尤其是RealHighway（RHW），Network Widening Mod（NWM）和Street Addon Mod（SAM）中。</p>
+							<p><em>FLEX pieces</em>最初看起来可能与Puzzle pieces相同，因为它们都是可扑通的，但是与公园拼块不同，
+							它们<em>可以</em>改变成新的功能，并且可以更改以更好地适应周围环境，
+							接受起始块的输入，有时 甚至充当起始块/转换块的组合。 
+							示例包括对角街道辅助拼块（Diagonal Street Helper Pieces），
+							大道环岛以及RealHighway（RHW）系统中的许多较新组件（几乎所有这些组件的名称均以“ FLEX”开头）。 
+							因此，单个FLEX件可以实现一系列功能，否则可能需要多达50个常规拼块。 在将FLEX块放置到游戏中后，游戏还会将FLEX块类似于可拖动的交通网络块对待。</p>
+							<p><em>TE lots</em>（<em>transit-enabled lots</em>的简称）是基于lot的项，也可用于扑通，但不受RUL约束，
+							主要目的是允许模拟市民转换交通类型（即从乘火车到步行）或给一些特定的交通网络添加一些非转换目的的功能，
+							TE lots最常见的用途是车站和收费站。</p>
+							<p>有关更多详细信息，请参见此处。</p>
+						<li class="faq">如何在不同的puzzle/FLEX/start pieces之间移动，以及如何旋转它们？</li>
+							<p>TAB键将在单个图标下的一组给定拼块块中向前切换，而Shift-TAB键将向后切换。
+							通过Home和End键进行旋转。 对于MacBook用户，Fn + Home和Fn + End进行旋转。</p>
+						<li class="faq">“高速公路”菜单底部带有NAM徽标的图标怎么办？为什么单击该图标后却什么也不做？</li>
+							<p>NAM徽标图标是一个诊断工具，如果悬停其上，将向您显示当前正在运行的NAM控制器的版本。 这对于诊断与控制器有关的问题很有用。</p>
+						<li class="faq">为什么放置拼块后游戏会崩溃？</li>
+							<p>这是游戏本身的bug，通常是由于尝试将常规拼块放置在TE lots地块附近而触发的。 
+							如果在建造拼块的过程中，拼块的覆盖区与TE lost的覆盖区重叠，
+							那么即使在放置拼块之前，游戏通常也不能理解其配置，并将立即崩溃。
+							这是游戏可执行文件中的一个问题，因此，长期以来它一直被认为是无法解决的问题。
 							
-							<p><em>However</em>, <strong>simmaster07</strong> managed to decode enough of the framework that SimCity 4 uses to load DLL files from other sources, and was able to patch this issue with his <em>SC4Fix.dll</em> file.
-							SC4Fix is available at <a href="http://community.simtropolis.com/files/file/30883-sc4fix-third-party-patches-for-sc4/">Simtropolis</a>.
-						<li class="faq">Why isn't it possible to add true new networks, instead of using starter pieces?</li>
-							<p>Adding new networks is, at this time, impossible.  The base RHW network was only possible as it used an unused network stub left in the game.  There
-							are no more unused network stubs for us to use.  The starter piece paradigm allows us to very closely mimic the effects of adding true
-							new networks, however.</p>
-						<li class="faq">Why haven't you guys added submenus instead of using TAB loops?</li>
-							<p>Adding new submenus is, at this time, impossible.  SC4 mod developers have tried for many years, to no avail.</p>
-						<li class="faq">Certain draggable items are not working for me, and I'm following the directions.  Why isn't it working?</li>
-							<p>If you're referring to starter pieces, make sure you're dragging the specified default network out the correct end of the piece.
-							Trying to "drag" the actual starter piece itself will get you nowhere.  If you're referring to a starter piece-based network extension
-							not cooperating with a particular setup you're trying to build, it may be that the setup is not supported.  If you're getting "blank" tiles
-							upon drawing the item, this is generally a sign of improper installation and/or conflicting files being present in your Plugins.</p>
-						<li class="faq">My RCI demand seems to have changed since I installed the NAM.  What is happening?</li>
-							<p>The NAM does not directly affect RCI demand.  It does not modify anything other than transportation-related files.  You may have installed something else
-							recently that does modify other parts of the game, however.  Because the NAM is popular and a large-scale mod, many newer players
-							who have installed other files at the same time mistakenly presume the NAM is at fault.</p>
-						<li class="faq">I'm having difficulty using U-Drive-It (UDI) functionality on certain NAM items.  Is there any way to fix this?</li>
-							<p>It depends on the item--Single-Track Rails (STR) and the various Turning Lane Avenue (TLA) options in the Network Widening Mod (NWM) are perhaps the most prone to issues.  
-							UDI was a last-minute addition to SimCity 4 Deluxe/Rush Hour, and is known for having a number of quirks.  There really isn't a way to fix them because of these quirks, though the TLA quirks can be mitigated
-							by disabling "Snap To Road" and driving manually.</p>
-						<li class="faq">I'm from North America.  Why aren't the traffic signals so they're on the far side of the intersection, as they are here?  Can I change this?</li>
-							<p>The way the game's default traffic signals work with the stop point system on network path files, the signals have to be on the near-side in order
-							to function.  Some of the FLEX Turn Lane (FTL) options and Turn Lane Extension Pieces (TuLEPs) use trick stop points to allow for far-side signals, but there are feasible limits to this technique.  
-							Recently, however, there have been advances in signal modding, using true-3D props, which have allowed for offset props to be developed, getting around this issue.  Offset props have 
-							not been released as of writing, but may potentially be made available as a third-party addition in the future.</p>
-						<li class="faq">I'm from a country where people drive on the left.  Can I switch the side of the traffic signals?</li>
-							<p>Yes.  Check out the Signal Replacement Project, developed by NAM Team member MandelSoft.  Please note that MandelSoft is no longer active in the SC4 community, and newer items may not be covered by that mod.
-							It is not the NAM Team's responsibility to update independent cosmetic mods.</p>
-						<li class="faq">Should I use the SC4 DatPacker or JDatPacker tools to consolidate my NAM installation into a single file?</li>
-							<p>With the Mac version, it is effectively required to consolidate the mods files using JDatPacker, due to the "number-of-files limit" issue. With the Windows version, it will speed up load times, but you'll need to ensure you remove the DatPacked files upon installing any NAM updates, or else they will
-							interfere with the proper functionality of the update.  Unless you also preserve your pre-DatPacked NAM installation, you will also be unable to use the NAM installer's ability to install the same
-							options when updating to a new version.  As such, the NAM Team generally does not recommend that Windows users DatPack their installations.</p>
-						<li class="faq">How do I build an interchange with the RealHighway (RHW) system?</li>
-							<p>Rather than the pre-fabricated, one-piece interchanges of the game's default highway system, the RealHighway system was designed with
-							the concept of modular interchange construction in mind.  More details can be found in the RHW portion of the documentation.  An upcoming release of the NAM will, however,
-							change this at long last, as a series of FLEX-based pre-fabricated interchanges for the RHW system is in the works.</p>
-						<li class="faq">Why aren't my neighbor connections working on RealHighways and/or wider Roads, Avenues and One-Way Roads?  How do I fix them?</li>
-							<p>Most RealHighways (except the RHW-2 and RHW-3 networks) and some multi-tile starter-based items require the use of special "Neighbor Connector Puzzle Pieces" (NCPPs) to function.
-							For networks that are "combined", having adjacent two-way traffic, simply drag the network to the edge of the city tile, as you normally would (ignoring the fact that the neighbor 
-							connection arrows both face the same direction), and plop the appropriate Neighbor Connection Puzzle Piece over it.  You'll need to do this on both sides of the neighbor connection.
-							For one-way/"split" networks, follow the same directions, and if there is a gap between the two directions, you'll need to place underground loop pieces next to the city edge, between
-							the two carriageways.</p>
-						<li class="faq">Why can't I build diagonal intersections with some of the wider Roads, Avenues and One-Way Roads?</li>
-							<p>This functionality is still in the works, and will be added in a future release.</p>
-						<li class="faq">When is the next NAM version being released?</li>
-							<p>There is no  date or timeline for the next release.  We honestly have no idea.  This project is a very passionate hobby for many NAM Team members, but it is still just that--a hobby, something
-							we do in our spare time.  It's also a technically complex undertaking, where things can unexpectedly go wrong in development.  It's simply
-							not possible for us to predict when we'll be done with a release, and coming up with arbitrary release dates just leads to extremely buggy releases
-							or postponement, disappointing everyone in the process.  The one time we did it (in 2013), it did not go well.  Besides, we like to surprise people.</p>
-						<li class="faq">I'm a user from outside the North America--are there Euro road textures to make the roads look more familiar to me?</li>
-							<p>Yes, just select one of the Euro texture .</p>
-						<li class="faq">I have ideas for new features.  Does the NAM Team take requests?</li>
-							<p>Certainly.  That said, being the transportation fiends we are, we probably want a lot of the same stuff you do, and there's a good chance it's either in development or planned.</p>
-						<li class="faq">I'd like to contribute to the NAM. How do I do so?</li>
-							<p>As far membership on the NAM Team or the NAM Associates testing group goes, we're always on the lookout for folks with the
-							right skills on the forums.  If you're looking to add something to the mod, show us a prototype of some sort--we'll help you figure out
-							the best way to realize it.  We don't, however, have open sign-ups for development or testing positions.  </p>
-						<li class="faq">Are you guys crazy, making this extensive mod for a 14-year-old game?!</li>
+							<p><em>但是</em>,，<strong>simmaster07</strong> 设法对SimCity 4用于从其他来源加载DLL文件的框架进行了足够的解码，并能够使用其<em>SC4Fix.dll</em>文件来修复此问题。
+							<a href="http://community.simtropolis.com/files/file/30883-sc4fix-third-party-patches-for-sc4/">
+							Simtropolis</a>网站可以下载SC4Fix。.
+						<li class="faq">为什么不是添加真正的新交通网络来代替起始拼块的使用呢？</li>
+							<p>目前，添加新的交通网络是不可能的。 
+							基本RHW网络可以使用，是因为它使用了游戏中剩余的未使用的网络stub（译者注：理解为设计是预留的东西）。 
+							没有更多未使用的网络stub供我们使用。 
+							但是，起始拼块允许我们非常紧密地模拟添加真正的新交通网络的效果。</p>
+						<li class="faq">你们为什么不添加子菜单而使用TAB循环？</li>
+							<p>目前，无法添加新的子菜单。 SC4 mod开发人员尝试了许多年，但没有成功。</p>
+						<li class="faq">某些可拖动项不起作用，我已按照说明进行操作，可它为什么就不起作用呢？</li>
+							<p>如果您指的是起始拼块，请确保将指定的默认交通网络拖出拼块的末端。
+							试图“拖动”实际的起始拼块本身没有任何作用。
+							如果您所指的是基于起始拼块的交通网络扩展，而该扩展与您要构建的特定设置不配合，
+							则可能是不支持该设置。
+							如果在绘制项目时出现“空白”拼块，则通常表示插件安装不正确和/或文件冲突。</p>
+						<li class="faq">自从我安装NAM后，我的RCI需求似乎已经改变。 怎么回事？</li>
+							<p>NAM不会直接影响RCI需求。
+							除了与交通相关的文件外，它不会修改其他任何内容。
+							但是，您最近可能安装了其他东西，修改了游戏的其他部分。 
+							由于NAM是流行的大型Mod，因此许多同时安装了其他文件的较新的玩家错误地认为NAM有问题。</p>
+						<li class="faq">我在某些NAM项目上使用U-Drive-It（UDI）功能时遇到困难。 有没有什么办法解决这一问题？</li>
+							<p>NWM中的Single--Tracl Rails（STR单轨）
+							和NWM中的大道转弯车道的能是最容易出现问题的地方。
+							UDI是SimCity 4 Deluxe / Rush Hour的最后一刻完成的，总所周知其行为怪异。 尽管有这么奇怪，但确实没有办法解决这些问题，
+							然而可以通过禁用“按路行驶”并手动驾驶来减轻TLA的怪异问题。</p>
+						<li class="faq">我来自北美。为什么交通灯不在十字路口的另一边，就像在这里一样?我可以改变吗?</li>
+							<p>游戏的默认交通信号灯与交通网络路径文件上的停靠点系统一起工作的方式，信号必须在近侧才能起作用。
+							一些FLEX转弯车道（FTL）选项和转弯车道扩展件（TuLEP）使用虚拟stop point 来允许远侧信号，但是该技术存在很多的限制。
+							但是，最近，使用true-3D道具在信号调制方面取得了进步，
+							这使得可以开发偏移道具来解决这个问题。
+							截至撰写本文时，偏移道具尚未发布，但将来可能会作为第三方添加项提供。</p>
+						<li class="faq">我来自一个驾驶侧在左边的国家。我可以切换交通信号灯为另一侧吗？</li>
+							<p>当然。查看由NAM团队成员MandelSoft开发的Signal Replacement Project。
+							请注意，MandelSoft在SC4社区中不再活跃，该mod可能不涵盖较新的项。
+							NAM团队不负责更新独立的美化插件。</p>
+						<li class="faq">是否应该使用SC4 DatPacker或JDatPacker工具将NAM安装整合到单个文件中？</li>
+							<p>对于Mac版本，由于存在“文件数限制”问题，实际上需要使用JDatPacker整合mods文件。 对于Windows版本，它将加快加载时间，但是您需要确保在安装任何NAM更新时删除DatPacked文件，否则它们将干扰更新的正常功能。 除非您还保留DatPacked之前的NAM安装，否则在更新到新版本时，也将无法使用NAM安装程序安装相同选项的功能。 因此，NAM团队通常不建议Windows用户DatPack安装。</p>
+						<li class="faq">如何使用RealHighway（RHW）系统建造立交？</li>
+							<p>RealHighway系统的设计不是为了游戏默认公路系统的预制立交的整体式互换，而是考虑了模块化互换建造的概念。
+							可以在文档的RHW部分找到更多详细信息。
+							但是，NAM即将发布的版本最终将改变这一状况，
+							因为针对RHW系统的一系列基于FLEX的预制立交互换正在开发中。</p>
+						<li class="faq">为什么我的邻城连接在RealHighway和/或更宽的道路，
+						大街和单向道路上不起作用？ 我该如何解决？</li>
+							<p>大多数RealHighway（RHW-2和RHW-3网络除外）和某些基于多个起始块的项都需要使用
+							特殊的“邻城连接器拼块”（NCPP）才能起作用。 对于具有相邻双向车道的“组合”网络，
+							只需像通常那样将网络拖动到城市的边缘（忽略邻城连接箭头都朝向相同方向的实际情况），
+							然后使用适当的邻城连接拼块覆盖到上面。 您需要在邻城连接的两边（译者注：A城市和B城市）进行此操作。
+							对于单向/“分割”的网络，请遵循相同的方向，如果两个方向之间存在间隙，则需要在两条行车道之间的城市边缘附
+							近放置地下环路拼块（underground loop pieces）。</p>
+						<li class="faq">为什么不能与一些较宽的道路，大街和单向路建立对角线交叉口？</li>
+							<p>此功能仍在开发中，并将在以后的版本中添加。</p>
+						<li class="faq">下一个NAM版本何时发布？</li>
+							<p>没有下一个版本的日期或时间表。 老实说，我们不知道。 对于许多NAM团队成员来说，这个项目是一个非常充满热爱的业余爱好，
+							但这仍然是一项业余爱好，这是我们的业余爱好。 
+							这也是一项技术复杂的工作，开发中可能会出乎意料地出错。
+							对于我们来说，根本不可能预测何时完成发布，
+							而任意定下日期只会导致极其错误的发布或推迟，从而使过程中的每个人都感到失望。
+							曾经有一次（2013年）我们准时发布，但那次做得并不好。 此外，我们喜欢给人们一个惊喜。</p>
+						<li class="faq">我是北美以外的用户-是否有欧洲道路纹理可以使我对道路更加熟悉？</li>
+							<p>是的，只需选择欧洲纹理之一。</p>
+						<li class="faq">我对新功能有想法。 NAM团队会接受请求吗？</li>
+							<p>当然。 也就是说，作为我们的朋友，我们可能希望您做很多相同的事情，
+							而且很有可能在开发中或计划中。</p>
+						<li class="faq">我想为NAM做贡献。 我该怎么做？</li>
+							<p>就NAM小组或NAM Associates测试小组的成员而言，我们一直在论坛上寻找具有适当技能的人员。
+							如果您想向mod添加一些东西，请向我们展示某种原型-我们将帮助您找出实现它的最佳方法。
+							但是，我们没有开放的开发或测试职位注册。</p>
+						<li class="faq">你们为这个14岁的游戏制作了这么个牛逼的mod疯了吗？</li>
 							<p>Yes.</p>
 					</ol>
 			</div>
 			
 			<div>
 				<p class="navigation">
-					<a href="1-start.html">Start</a>&nbsp;
-					<a href="2-installation.html">Installation</a>&nbsp;
-					<a href="3-basics.html">In-Game Basics</a>&nbsp;
-					<a href="4-content-overview.html">Content Overview</a>&nbsp;
+					<a href="1-start.html">开始</a>&nbsp;
+					<a href="2-installation.html">安装</a>&nbsp;
+					<a href="3-basics.html">游戏内使用</a>&nbsp;
+					<a href="4-content-overview.html">内容概述</a>&nbsp;
 					<a href="5-faq.html">FAQs</a>&nbsp;
-					<a href="6-glossary.html">Glossary</a>&nbsp;
-					<a href="7-history.html">History</a>&nbsp;
-					<a href="8-technical.html">Tech Info</a>&nbsp;
-					<a href="9-credits.html">Credits</a>&nbsp;
-					<a href="feature-guides/quicklink.html">Feature Guides</a>
+					<a href="6-glossary.html">术语</a>&nbsp;
+					<a href="7-history.html">更新历史</a>&nbsp;
+					<a href="8-technical.html">技术信息</a>&nbsp;
+					<a href="9-credits.html">鸣谢</a>&nbsp;
+					<a href="feature-guides/quicklink.html">功能指南</a>
 				</p>
 			</div>
 			
-			<div class="footer"><p>&nbsp;�2017 NAM Team and Associates</p></div>
+			<div class="footer"><p>&nbsp;2017 NAM Team and Associates</p></div>
 		</div>
 	</body>
 </html>
